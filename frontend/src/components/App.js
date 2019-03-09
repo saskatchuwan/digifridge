@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Switch } from 'react-router-dom';
 
-class App extends Component {
+import HomePage from './home/home';
+
+
+class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1>testtttt</h1>
-        </header>
+        <HomePage />
       </div>
     );
   }
