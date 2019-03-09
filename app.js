@@ -8,7 +8,7 @@ mongoose
   .then(() => console.log("Connected to MongoDB successfully"))
   .catch(err => console.log(err));
 
-app.get("/", (req, res) => res.send("dqfvkhdfiv"));
+app.get("/", (req, res) => res.send("hey there it's me alicia"));
 
 const port = process.env.PORT || 5000;
 
