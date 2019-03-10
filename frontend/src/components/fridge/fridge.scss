@@ -1,7 +1,16 @@
-.fridge-index-main-container {
-  background-color: green;
-}
+.fridge-main-container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-right: 10px;
 
-.fridge-add-items {
-  background-color: blueviolet;
+  .fridge-index-main-container {
+    flex: 4 0;
+    background-color: green;
+  }
+  
+  .fridge-add-items {
+    flex: 1 0;
+    background-color: blueviolet;
+  }
 }

@@ -13,7 +13,7 @@ class SavedRecipesIndex extends React.Component {
   render() {
 
     return (
-      <div className='saved-recipes-index-main-container'>
+      <div id='saved-recipes' className='recipes-main-container'>
         {/* need to create list of saved recipe index items */}
         <SavedRecipesIndexItem />
       </div>

@@ -13,7 +13,7 @@ class RecipeResultsIndex extends React.Component {
   render() {
 
     return (
-      <div className='recipe-index-main-container'>
+      <div id='recipe-results' className='recipes-main-container'>
         {/* need to create list of fridge index items */}
         <RecipeResultsIndexItem />
       </div>
