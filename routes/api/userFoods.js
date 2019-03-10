@@ -7,8 +7,8 @@ const UserFood = require('../../models/UserFood');
 const validateFoodInput = require('../../validation/userFoods');
 
 
-router.get('/user/:user_id', (req, res) => {
-    UserFood.find({ user: req.params.user_id })
+router.get('/', passport.authenticate('jwt', { session: false }), (req, res) => {
+    UserFood.find({ user: req.user.id })
         .then(userFoods => res.json(userFoods))
         .catch(err =>
             res.status(404).json({ noFoodsFound: 'No foods found from that user' }

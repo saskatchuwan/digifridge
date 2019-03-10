@@ -12,6 +12,7 @@ import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
 
 import { fetchRecipesEdamam, fetchRecipesFood2Fork } from './util/recipes_api_util';
+import {fetchUserFoods, postUserFood} from './actions/food_actions';
 
 import 'normalize.css';
 
@@ -44,6 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.dispatch = store.dispatch;
   window.fetchRecipesEdamam = fetchRecipesEdamam;
   window.fetchRecipesFood2Fork = fetchRecipesFood2Fork;
+  window.fetchUserFoods = fetchUserFoods;
+  window.postUserFood = postUserFood;
   
   const root = document.getElementById('root');
   
