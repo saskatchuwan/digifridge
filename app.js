@@ -33,6 +33,7 @@ app.use('/api/userFoods', userFoods);
 // app.use("/api/users", users);
 // app.use("/api/tweets", tweets);
 
+app.get("/", (req, res) => res.send("hi there it's me alicia"));
 
 const port = process.env.PORT || 5000;
 
