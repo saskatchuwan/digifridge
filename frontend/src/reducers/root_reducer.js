@@ -1,17 +1,19 @@
 import { combineReducers } from 'redux';
-import sessionReducer from './session_reducer';
-import errorsReducer from './errors_reducer';
-import foodsReducer from './foods_reducer';
-import recipesReducer from './recipes_reducer';
-import recipeSavesReducer from './recipe_saves_reducer';
+import SessionReducer from './session_reducer';
+import ErrorsReducer from './errors_reducer';
+import FoodsReducer from './foods_reducer';
+import RecipesReducer from './recipes_reducer';
+import RecipeSavesReducer from './recipe_saves_reducer';
+import SelectedFoodsReducer from './selected_foods_reducer';
 
 
-const rootReducer = combineReducers({
-  foods: foodsReducer,
-  recipes: recipesReducer,
-  recipeSaves: recipeSavesReducer,
-  errors: errorsReducer,
-  session: sessionReducer,
+const RootReducer = combineReducers({
+  foods: FoodsReducer,
+  selectedFoods: SelectedFoodsReducer,
+  recipes: RecipesReducer,
+  recipeSaves: RecipeSavesReducer,
+  errors: ErrorsReducer,
+  session: SessionReducer,
 });
 
-export default rootReducer;
+export default RootReducer;

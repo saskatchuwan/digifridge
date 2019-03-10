@@ -1,4 +1,4 @@
-const recipeSavesReducer = (state = {}, action) => {
+const RecipeSavesReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     default:
@@ -6,4 +6,4 @@ const recipeSavesReducer = (state = {}, action) => {
   }
 };
 
-export default recipeSavesReducer;
+export default RecipeSavesReducer;

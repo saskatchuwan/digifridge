@@ -1,4 +1,4 @@
-const foodsReducer = (state = {}, action) => {
+const FoodsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     default:
@@ -6,4 +6,4 @@ const foodsReducer = (state = {}, action) => {
   }
 };
 
-export default foodsReducer;
+export default FoodsReducer;
