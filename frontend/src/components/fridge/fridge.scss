@@ -8,28 +8,44 @@
 
   .fridge-index-main-container {
     flex: 3 0;
-    // background-color: green;
-
     
-    .fridge-index-ul {
-      display: flex;
-      flex-direction: column;
+    .fridge-index {
       padding-left: 0;
       // border: 1px solid gray;
       height: 90%;
       width: 85%;
+
       margin: auto;
       margin-top: 20px;
+      overflow: scroll;
+      
 
       .fridge-index-item {
         display: flex;
         justify-content: center;
         align-items: center;
         list-style-type: none;
-        background-color: rosybrown;
+        background-color: rgba(196, 233, 247, 0.56);
         margin: 1px;
         text-align: center;
         height: 10%;
+        border-radius: 2px;
+        position: relative;
+
+          .remove-item-button {
+            position: absolute;
+            left: 90%;
+            display: none;
+          }
+      }
+
+
+      .fridge-index-item:hover {
+        background-color: rgba(102, 180, 209, 0.8);
+        cursor: pointer;
+          .remove-item-button {
+            display: block;
+          }
       }
 
     }

@@ -1,11 +1,14 @@
 import React from 'react';
 
-// could also destructure the props: ({ album, song, artist, fetchSong })
-const FridgeIndexItem = (props) => {
+const FridgeIndexItem = ({ food, deleteUserFood }) => {
   return (
-    <li className='fridge-index-item'>
-      {props.food.name}
-    </li>
+    <div className='fridge-index-item' key={food._id}>
+      {food.name}
+      <div onClick={() => deleteUserFood(food._id)}
+        className='remove-item-button'>
+        X
+      </div>
+    </div>
   );
 }
 
