@@ -8,6 +8,7 @@ module.exports = function validateRecipeInput(recipe) {
     recipe.linkUrl = validText(recipe.linkUrl) ? recipe.linkUrl : '';
     recipe.imgUrl = validText(recipe.imgUrl) ? recipe.imgUrl : '';
     recipe.description = validText(recipe.description) ? recipe.description : '';
+    recipe.source = validText(recipe.source) ? recipe.source : '';
 
     if (!Validator.isLength(recipe.title, { min: 2, max: 30 })) {
         errors.handle = 'Food name must be between 2 and 30 characters'
@@ -24,6 +25,9 @@ module.exports = function validateRecipeInput(recipe) {
     if (!Validator.isLength(recipe.description, {max: 280})) {
         errors.handle = 'Description must be 280 characters or less';
     } 
+    if (!Validator.isLength(recipe.source, {min: 1, max: 100})) {
+        errors.handle = 'Source must be between 1 and 100 characters';
+    }
     
     
     return {

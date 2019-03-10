@@ -6,8 +6,8 @@ const passport = require('passport');
 const UserRecipe = require('../../models/UserRecipe');
 const validateRecipeInput = require('../../validation/userRecipes');
 
-router.get('/user/:user_id', (req, res) => {
-    UserRecipe.find({user: req.params.user_id})
+router.get('/', passport.authenticate('jwt', { session: false }), (req, res) => {
+    UserRecipe.find({user: req.user.id})
         .then(userRecipes => res.json(userRecipes))
         .catch(err => 
             res.status(404).json({noRecipesFound: 'No recipes found for this user'}
@@ -29,7 +29,8 @@ router.post('/',
             linkUrl: req.body.linkUrl,
             imgUrl: req.body.imgUrl,
             user: req.user.id,
-            description: req.body.description
+            description: req.body.description,
+            source: req.body.source
         });
 
         newRecipe.save().then(recipe => res.json(recipe));
