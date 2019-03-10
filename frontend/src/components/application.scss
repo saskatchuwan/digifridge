@@ -1,3 +1,14 @@
+* {
+  font-family: 'Raleway', sans-serif;
+  // color: #343434;
+  color: #303236;
+}
+
+a, a:hover, a.visited {
+  text-decoration: none;
+
+}
+
 //--------------------------------------------------------------------------
 //wraps entire in-app routes (includes: topnav, main component and footer)
 //--------------------------------------------------------------------------
@@ -5,7 +16,7 @@
 .in-app-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
   // background-color: greenyellow;
   height: 100vh;
 }

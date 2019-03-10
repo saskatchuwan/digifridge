@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.scss';
 
+import logo from '../../images/logotest.png';
+
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
@@ -27,8 +29,8 @@ class NavBar extends React.Component {
       } else {
         return (
             <div className='logged-out-links'>
-                <Link to={'/signup'}>Signup</Link>
-                <Link to={'/login'}>Login</Link>
+                <Link to={'/signup'}>SIGNUP</Link>
+                <Link to={'/login'}>LOGIN</Link>
             </div>
         );
       }

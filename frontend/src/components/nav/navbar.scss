@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  background-color: bisque;
+  border-bottom: 1px solid rgb(236, 230, 230);
+  background-color: #FFFFFF;
 }
 
 .navbar button {
@@ -11,11 +11,12 @@
 }
 
 .logged-out-links {
-  width: 105px;
+  width: 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  font-size: 14px;
 }
 
 .logged-in-links {
@@ -25,3 +26,5 @@
   align-items: center;
   padding: 10px;
 }
+
+
