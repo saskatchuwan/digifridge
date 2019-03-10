@@ -1,6 +1,8 @@
 import React from 'react';
 import '../fridge.scss';
 
+import handle from '../../../images/icons/line.svg';
+
 class FridgeAddItems extends React.Component {
   constructor(props) {
     super(props);
@@ -29,6 +31,8 @@ class FridgeAddItems extends React.Component {
 
     return (
       <div className='fridge-add-items'>
+        <img id='fridge-bottom-handle' src={handle} alt='no handle' />
+        
         <div className='fridge-add-items-input-container'>
           <input
             className='add-item-input'
