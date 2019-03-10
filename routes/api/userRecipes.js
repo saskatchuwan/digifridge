@@ -28,7 +28,8 @@ router.post('/',
             title: req.body.title,
             linkUrl: req.body.linkUrl,
             imgUrl: req.body.imgUrl,
-            user: req.user.id
+            user: req.user.id,
+            description: req.body.description
         });
 
         newRecipe.save().then(recipe => res.json(recipe));

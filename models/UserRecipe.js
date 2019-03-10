@@ -17,6 +17,10 @@ const UserRecipeSchema = new Schema({
     imgUrl: {
         type: String,
         required: false
+    },
+    description: {
+        type: String,
+        required: false
     }
 });
 
