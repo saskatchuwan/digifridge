@@ -21,6 +21,10 @@ const UserRecipeSchema = new Schema({
     description: {
         type: String,
         required: false
+    },
+    source: {
+        type: String,
+        require: false
     }
 });
 
