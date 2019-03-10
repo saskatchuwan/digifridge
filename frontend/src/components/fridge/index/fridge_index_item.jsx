@@ -4,7 +4,7 @@ import React from 'react';
 const FridgeIndexItem = (props) => {
   return (
     <li className='fridge-index-item'>
-      Apple
+      {props.food.name}
     </li>
   );
 }

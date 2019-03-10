@@ -4,6 +4,25 @@ import '../fridge.scss';
 class FridgeAddItems extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      name:''
+    };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  update(field) {
+    return e => this.setState({
+      [field]: e.target.value
+    });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.postUserFood(this.state);
+    this.setState({
+      name: ''
+    });
   }
 
   render() {
@@ -14,9 +33,14 @@ class FridgeAddItems extends React.Component {
           <input
             className='add-item-input'
             placeholder='beets'
+            onChange={this.update('name')}
+            value={this.state.name}
             />
 
-          <button>digifridge it!</button>
+          <button 
+            onClick={this.handleSubmit}>
+            digifridge it!
+          </button>
 
         </div>
       </div>
