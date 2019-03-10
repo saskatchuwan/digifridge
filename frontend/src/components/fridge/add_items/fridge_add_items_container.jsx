@@ -1,18 +1,12 @@
 import { connect } from 'react-redux';
 import FridgeAddItems from './fridge_add_items';
+import { postUserFood } from '../../../actions/food_actions';
 
-const mapStateToProps = (state) => {
-  // let foods = Object.values(state.entities.foods); //array of foods
-
-  return {
-    // foods,
-  };
-};
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    // since users are able to add on to this list of foods, need to map fetchFood
+    postUserFood: (food) => dispatch(postUserFood(food)),
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(FridgeAddItems);
+export default connect(null, mapDispatchToProps)(FridgeAddItems);

@@ -1,17 +1,19 @@
 import { connect } from 'react-redux';
 import FridgeIndex from './fridge_index';
+import { fetchUserFoods, deleteUserFood } from '../../../actions/food_actions';
 
 const mapStateToProps = (state) => {
-  // let foods = Object.values(state.entities.foods); //array of foods
+  let foods = Object.values(state.foods); //array of foods
 
   return {
-    // foods,
+    foods,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    // since users are able to add on to this list of foods, need to map fetchFood
+    fetchUserFoods: () => dispatch(fetchUserFoods()),
+    deleteUserFood: (id) => dispatch(deleteUserFood(id)),
   };
 };
 
