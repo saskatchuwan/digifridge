@@ -38,7 +38,7 @@ router.post('/',
 
 router.delete('/:user_food_id', passport.authenticate('jwt', { session: false }),
     (req, res) => {
-    console.log(req.params.user_food_id);
+    
     // passport.authenticate('jwt', { session: false })
     const _id = req.params.user_food_id;
     
