@@ -19,13 +19,15 @@
 .main-in-app-component {
   align-self: center;
   display: flex;
-
+  margin: auto;
   width: 80%;
   height: 80%;
 
   //this includes: #saved-recipes, #recipe-results
   .recipes-main-container {
     width: 1000px;
+    border-radius: 2%;
+    border: 1px solid grey;
   }
 }
 

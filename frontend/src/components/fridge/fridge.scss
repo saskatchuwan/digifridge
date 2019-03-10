@@ -3,10 +3,13 @@
   flex-direction: column;
   width: 400px;
   margin-right: 10px;
+  border-radius: 3%;
+  border: 1px solid grey;
 
   .fridge-index-main-container {
-    flex: 4 0;
-    background-color: green;
+    flex: 3 0;
+    // background-color: green;
+
     
     .fridge-index-ul {
       display: flex;
@@ -35,8 +38,9 @@
   
   .fridge-add-items {
     flex: 1 0;
-    background-color: blueviolet;
+    // background-color: blueviolet;
 
+    border-top: 1px solid grey;
     display: flex;
     flex-direction: column;
     justify-content: center;

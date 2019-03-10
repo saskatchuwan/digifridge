@@ -3,12 +3,9 @@ import RecipeResultsIndexItem from './recipe_results_index_item';
 import './recipe_results.scss';
 
 class RecipeResultsIndex extends React.Component {
-
   constructor(props) {
     super(props);
-
   }
-
 
   render() {
 

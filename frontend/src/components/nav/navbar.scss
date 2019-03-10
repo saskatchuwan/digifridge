@@ -10,14 +10,18 @@
   height: 20px;
 }
 
-.links1 {
-  width: 100px;
+.logged-out-links {
+  width: 105px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
-.links2 {
-  width: 400px;
+.logged-in-links {
+  width: 350px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }

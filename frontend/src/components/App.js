@@ -28,7 +28,7 @@ class App extends React.Component {
         </Switch>
         
         {/* optional footer */}
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }
