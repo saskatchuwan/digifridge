@@ -11,6 +11,8 @@ import configureStore from './store/store';
 import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
 
+import { fetchRecipesEdamam, fetchRecipesFood2Fork } from './util/recipes_api_util';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -37,7 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
   //for testing
   window.axios = axios;
   window.getState = store.getState;
-  // window.dispatch = store.dispatch;
+  window.dispatch = store.dispatch;
+  window.fetchRecipesEdamam = fetchRecipesEdamam;
+  window.fetchRecipesFood2Fork = fetchRecipesFood2Fork;
   
   const root = document.getElementById('root');
   
