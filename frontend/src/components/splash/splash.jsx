@@ -14,8 +14,7 @@ class SplashPage extends React.Component {
         </div>
 
         <div classname='hero-text'>
-            <h1>Hungry? Digifridgit.</h1>
-            {/* <h2>Make the most with what you have.</h2> */}
+            <h1>Hungry? Digifridgit. Make the most with what you have.</h1>
         </div>
 
       </div>
