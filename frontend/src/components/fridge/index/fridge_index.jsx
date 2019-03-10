@@ -15,7 +15,12 @@ class FridgeIndex extends React.Component {
     return (
       <div className='fridge-index-main-container'>
         {/* need to create list of fridge index items */}
-        <FridgeIndexItem />
+        <ul className='fridge-index-ul'>
+          <FridgeIndexItem />
+          <FridgeIndexItem />
+          <FridgeIndexItem />
+          <FridgeIndexItem />
+        </ul>
       </div>
     );
   }
