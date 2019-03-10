@@ -13,6 +13,8 @@ import { logout } from './actions/session_actions';
 
 import { fetchRecipesEdamam, fetchRecipesFood2Fork } from './util/recipes_api_util';
 
+import 'normalize.css';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;

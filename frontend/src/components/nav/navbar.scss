@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  background-color: bisque;
+}
+
+.navbar button {
+  height: 20px;
+}
+
+.logged-out-links {
+  width: 105px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logged-in-links {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}

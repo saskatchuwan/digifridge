@@ -1,0 +1,33 @@
+//--------------------------------------------------------------------------
+//wraps entire in-app routes (includes: topnav, main component and footer)
+//--------------------------------------------------------------------------
+
+.in-app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // background-color: greenyellow;
+  height: 100vh;
+}
+
+
+
+//---------------------------------------------------------------------------
+//wraps entire fridge, recipes components
+//---------------------------------------------------------------------------
+
+.main-in-app-component {
+  align-self: center;
+  display: flex;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+
+  //this includes: #saved-recipes, #recipe-results
+  .recipes-main-container {
+    width: 1000px;
+    border-radius: 2%;
+    border: 1px solid grey;
+  }
+}
+

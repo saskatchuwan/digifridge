@@ -1,0 +1,56 @@
+.fridge-main-container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-right: 10px;
+  border-radius: 3%;
+  border: 1px solid grey;
+
+  .fridge-index-main-container {
+    flex: 3 0;
+    // background-color: green;
+
+    
+    .fridge-index-ul {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+      // border: 1px solid gray;
+      height: 90%;
+      width: 85%;
+      margin: auto;
+      margin-top: 20px;
+
+      .fridge-index-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        background-color: rosybrown;
+        margin: 1px;
+        text-align: center;
+        height: 10%;
+      }
+
+    }
+
+  }
+  
+  .fridge-add-items {
+    flex: 1 0;
+    // background-color: blueviolet;
+
+    border-top: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .fridge-add-items-input-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+      width: 85%;
+    }
+  }
+}
