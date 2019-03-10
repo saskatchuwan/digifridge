@@ -4,12 +4,14 @@ import { Switch } from 'react-router-dom';
 
 import SplashPage from './splash/splash';
 import NavBarContainer from './nav/navbar_container';
+import Footer from './footer/footer';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 
 import Fridge from './fridge/fridge';
 import RecipeResultsContainer from './recipe_results/recipe_results_container';
 import SavedRecipesContainer from './saved_recipes/saved_recipes_container';
+
 
 class App extends React.Component {
   render() {
@@ -30,6 +32,7 @@ class App extends React.Component {
         </Switch>
         
         {/* optional footer */}
+        <Footer />
       </div>
     );
   }
