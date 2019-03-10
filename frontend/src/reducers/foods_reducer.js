@@ -14,7 +14,7 @@ const FoodsReducer = (state = {}, action) => {
 
     case REMOVE_USER_FOOD:
       let newState = _.merge({}, state);
-      delete newState.action.id;
+      delete newState[action.id];
       return newState;
 
     default:
