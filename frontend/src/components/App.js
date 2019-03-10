@@ -8,6 +8,7 @@ import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 
 import Fridge from './fridge/fridge';
+import RecipeResultsContainer from './recipe_results/recipe_results_container';
 
 class App extends React.Component {
   render() {
@@ -22,6 +23,7 @@ class App extends React.Component {
           <AuthRoute exact path="/signup" component={SignupFormContainer} />
 
           {/* protected routes: will include /home (recipe results) and /saved (user saved recipes */}
+          <ProtectedRoute path='/home' component={RecipeResultsContainer} />
         </Switch>
         {/* optional footer */}
       </div>

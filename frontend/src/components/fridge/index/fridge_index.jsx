@@ -1,5 +1,6 @@
 import React from 'react';
 import FridgeIndexItem from './fridge_index_item';
+import '../fridge.scss';
 
 class FridgeIndex extends React.Component {
 
