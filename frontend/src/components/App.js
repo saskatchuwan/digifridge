@@ -10,6 +10,8 @@ import SignupFormContainer from './session/signup_form_container';
 
 import ProtectedInApp from './protectedInApp';
 
+import './application.scss';
+
 
 class App extends React.Component {
   render() {
