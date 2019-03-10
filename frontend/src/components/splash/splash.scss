@@ -1,0 +1,24 @@
+.splash-main {
+  position: relative;
+
+  .video-hero video{
+    width: 100vw;
+    position: absolute;
+  }
+  
+  .hero-text {
+    position: absolute;
+    background-color: green;
+    z-index: 10;
+
+      h1 {
+        color: #FFFFFF;
+        z-index: 10;
+      }
+    
+      h2 {
+        color: #FFFFFF;
+      }
+  }
+  
+}
