@@ -23,4 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # config that holds external api keys and secret
-/config/keys.js
+/src/config
