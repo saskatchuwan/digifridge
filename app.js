@@ -4,6 +4,7 @@ const db = require('./config/keys').mongoURI;
 const mongoose = require('mongoose');
 const users = require("./routes/api/users");
 const userFoods = require('./routes/api/userFoods');
+const userRecipes = require('./routes/api/userRecipes');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 
@@ -21,6 +22,7 @@ app.use(bodyParser.json());
 // app.get("/", (req, res) => res.send("dqfvkhdfiv"));
 app.use("/api/users", users);
 app.use('/api/userFoods', userFoods);
+app.use('/api/userRecipes', userRecipes);
 
 //app.get("/", (req, res) => res.send("Hello World!!"));
 
