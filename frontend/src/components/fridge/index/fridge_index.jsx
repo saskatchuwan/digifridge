@@ -13,6 +13,7 @@ class FridgeIndex extends React.Component {
     this.handleSelect = this.handleSelect.bind(this);
     this.handleDeselect = this.handleDeselect.bind(this);
     this.handleRemove = this.handleRemove.bind(this);
+    this.handleFetchRecipes = this.handleFetchRecipes.bind(this);
   }
 
   componentDidMount () {
@@ -52,6 +53,11 @@ class FridgeIndex extends React.Component {
     this.handleDeselect(food.name);
   }
 
+  handleFetchRecipes() {
+    let queryTerms = this.state.selectedFoods.join(",");
+    this.props.fetchRecipes(queryTerms);
+  }
+
 
   render() {
     let { foods } = this.props;
@@ -78,8 +84,8 @@ class FridgeIndex extends React.Component {
         </div>
 
         <button
-          className='get-recipe-results'
-          
+          className='get-recipe-results-button'
+          onClick={this.handleFetchRecipes}
         >
           GET RECIPES
         </button>
