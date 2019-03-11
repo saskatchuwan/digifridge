@@ -27,5 +27,13 @@ const UserRecipeSchema = new Schema({
         require: false
     }
 });
+UserRecipeSchema.index({
+    user: 1,
+    linkUrl: 1,
+}, {
+        unique: true,
+    });
+
+
 
 module.exports = UserRecipe = mongoose.model('userRecipes', UserRecipeSchema);

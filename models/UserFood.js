@@ -19,5 +19,13 @@ const UserFoodSchema = new Schema({
         default: Date.now
     }
 });
+UserFoodSchema.index({
+    user: 1,
+    name: 1,
+}, {
+        unique: true,
+    });
+
+
 
 module.exports = User = mongoose.model('userFoods', UserFoodSchema);
