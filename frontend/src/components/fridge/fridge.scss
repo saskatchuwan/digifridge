@@ -8,17 +8,26 @@
 
   .fridge-index-main-container {
     flex: 3 0;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .get-recipe-results {
+      width: 85%;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
     .fridge-index {
       padding-left: 0;
       // border: 1px solid gray;
-      height: 90%;
+      height: 80%;
       width: 85%;
 
       margin: auto;
       margin-top: 20px;
       overflow: scroll;
-      
 
       .fridge-index-item {
         display: flex;

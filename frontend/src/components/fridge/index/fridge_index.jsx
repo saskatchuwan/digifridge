@@ -12,6 +12,7 @@ class FridgeIndex extends React.Component {
 
     this.handleSelect = this.handleSelect.bind(this);
     this.handleDeselect = this.handleDeselect.bind(this);
+    this.handleRemove = this.handleRemove.bind(this);
   }
 
   componentDidMount () {
@@ -46,9 +47,14 @@ class FridgeIndex extends React.Component {
     });
   }
 
+  handleRemove(food) {
+    this.props.deleteUserFood(food._id);
+    this.handleDeselect(food.name);
+  }
+
 
   render() {
-    let { foods, deleteUserFood } = this.props;
+    let { foods } = this.props;
 
     let foodItems;
     if (Object.keys(foods).length > 0) {
@@ -56,10 +62,10 @@ class FridgeIndex extends React.Component {
         return (
           <FridgeIndexItem
             food={food}
-            deleteUserFood={deleteUserFood}
             handleSelect={this.handleSelect}
             handleDeselect={this.handleDeselect}
             selectedFoods={this.state.selectedFoods}
+            handleRemove={this.handleRemove}
           />
         );
       });
@@ -70,6 +76,13 @@ class FridgeIndex extends React.Component {
         <div className='fridge-index'>
           {foodItems}
         </div>
+
+        <button
+          className='get-recipe-results'
+          
+        >
+          GET RECIPES
+        </button>
       </div>
     );
   }

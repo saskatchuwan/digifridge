@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FridgeIndexItem = ({ selectedFoods, food, deleteUserFood, handleSelect, handleDeselect }) => {
+const FridgeIndexItem = ({ selectedFoods, food, handleSelect, handleDeselect, handleRemove }) => {
   let display;
 
   if (selectedFoods.includes(food.name)) {
@@ -12,7 +12,7 @@ const FridgeIndexItem = ({ selectedFoods, food, deleteUserFood, handleSelect, ha
 
                 {food.name}
 
-                <div onClick={(e) => {deleteUserFood(food._id); e.stopPropagation()}}
+                <div onClick={(e) => {handleRemove(food); e.stopPropagation()}}
                   className='remove-item-button'>
                   X
                 </div>
@@ -25,7 +25,7 @@ const FridgeIndexItem = ({ selectedFoods, food, deleteUserFood, handleSelect, ha
 
                 {food.name}
 
-                <div onClick={(e) => {deleteUserFood(food._id); e.stopPropagation()}}
+                <div onClick={(e) => {handleRemove(food); e.stopPropagation()}}
                   className='remove-item-button'>
                   X
                 </div>
