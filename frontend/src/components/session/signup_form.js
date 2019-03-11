@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-
+import cx from 'classnames';
 class SignupForm extends React.Component {
   constructor(props) {
     super(props);
@@ -9,7 +9,12 @@ class SignupForm extends React.Component {
       name: '',
       password: '',
       password2: '',
-      errors: {}
+      errors: {
+        email: '',
+        handle: '',
+        password: '',
+        password2: ''
+      }
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,8 +25,11 @@ class SignupForm extends React.Component {
     if (nextProps.signedIn === true) {
       this.props.history.push('/login');
     }
-
-    this.setState({errors: nextProps.errors});
+    const pw = nextProps.errors.password ? nextProps.errors.password : '';
+    const em = nextProps.errors.email ? nextProps.errors.email : '';
+    const hn = nextProps.errors.handle ? nextProps.errors.handle : '';
+    const pw2 = nextProps.errors.password2 ? nextProps.errors.password2 : '';
+    this.setState({errors: {email: em, handle: hn, password: pw, password2: pw2}});
   }
 
   update(field) {
@@ -55,37 +63,59 @@ class SignupForm extends React.Component {
   }
 
   render() {
+    const emailErrorCN = cx({ 'session-errors': this.state.errors.email.includes('Email'), 'no-error': this.state.errors.email === '' });
+    const handleErrorCN = cx({ 'session-errors': this.state.errors.handle.includes('Name'), 'no-error': this.state.errors.handle === '' }) 
+    const pwErrorCN = cx({ 'session-errors': this.state.errors.password.includes('Password'), 'no-error': this.state.errors.password === '' }) 
+    const pw2ErrorCN = cx({ 'session-errors': this.state.errors.password2.includes('Confirm') || this.state.errors.password2.includes('match'), 'no-error': this.state.errors.password2 === '' }) 
     return (
-      <div className="login-form-container">
+      <div className="login-form-container login">
         <form onSubmit={this.handleSubmit}>
           <div className="login-form">
-            <br/>
+            <div className='session-input'>
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
                 placeholder="Email"
               />
-            <br/>
+              <div className={emailErrorCN}>
+                {this.state.errors.email}
+              </div>
+            </div>
+            <div className='session-input'>
               <input type="text"
                 value={this.state.name}
                 onChange={this.update('name')}
                 placeholder="Name"
               />
-            <br/>
+              <div className={handleErrorCN}>
+                {this.state.errors.handle}
+              </div>
+            </div>
+            <div className='session-input'>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 placeholder="Password"
               />
-            <br/>
-              <input type="password"
-                value={this.state.password2}
-                onChange={this.update('password2')}
-                placeholder="Confirm Password"
-              />
-            <br/>
-            <input type="submit" value="Submit" />
-            {this.renderErrors()}
+              <div className={pwErrorCN}>
+                {this.state.errors.password}
+              </div>
+            </div>
+            <div className='session-input'>
+                <input type="password"
+                  value={this.state.password2}
+                  onChange={this.update('password2')}
+                  placeholder="Confirm Password"
+                /> 
+              <div className={pw2ErrorCN}>
+                {this.state.errors.password2}
+              </div>
+              </div>
+              <div className='session-button'>
+                <input type="submit" value="Sign Up" />
+              </div>
+            
+            {/* {this.renderErrors()} */}
           </div>
         </form>
       </div>
