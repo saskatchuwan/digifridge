@@ -1,10 +1,10 @@
 import React from 'react';
 
-const FridgeIndexItem = ({ food, receiveSelectedFood, deleteUserFood}) => {
+const FridgeIndexItem = ({ food, deleteUserFood, handleSelect }) => {
   return (
     <div 
       className='fridge-index-item' 
-      onClick={() => receiveSelectedFood(food.name)}
+      onClick={() => handleSelect(food.name)}
       key={food._id}>
 
       {food.name}

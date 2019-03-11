@@ -5,9 +5,11 @@ import { receiveSelectedFood } from  '../../../actions/selected_food_actions';
 
 const mapStateToProps = (state) => {
   let foods = Object.values(state.foods); //array of foods
+  let selectedFoods = Object.values(state.selectedFoods);
 
   return {
     foods,
+    selectedFoods,
   };
 };
 
