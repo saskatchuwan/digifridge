@@ -20,8 +20,12 @@ class SplashPage extends React.Component {
         </div>
 
         <div classname='hero-text'>
-            <h1>Hungry? Digifridgit. Make the most with what you have.</h1>
+            <h2>Make the most with what you have.</h2>
         </div>
+
+        <a href='#/signup' className='get-started-button'>
+          GET STARTED
+        </a>
 
       </div>
     );
