@@ -45,6 +45,7 @@ class FridgeIndex extends React.Component {
             food={food}
             deleteUserFood={deleteUserFood}
             handleSelect={this.handleSelect}
+            selectedFoods={this.state.selectedFoods}
           />
         );
       });
