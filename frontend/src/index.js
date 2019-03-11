@@ -54,12 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchRecipeSaves = fetchRecipeSaves;
   window.postRecipeSave = postRecipeSave;
   window.deleteRecipeSave = deleteRecipeSave;
-<<<<<<< HEAD
-  window.removeSelectedFood = removeSelectedFood;
-=======
   window.fetchRecipes = fetchRecipes;
   window.readableRecipes = readableRecipes;
->>>>>>> master
   
   const root = document.getElementById('root');
   
