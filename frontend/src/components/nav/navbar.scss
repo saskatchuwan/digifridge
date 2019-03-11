@@ -1,9 +1,25 @@
 .navbar {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   border-bottom: 1px solid rgb(236, 230, 230);
   background-color: #FFFFFF;
+  height: 70px;
+
+  .nav-logo {
+    font-weight: bold;
+    line-height: 25px;
+    margin-left: 5px;
+    display: flex;
+
+     h1{
+      color: #91c11e;
+     }
+  }
+
+  .logo-icon {
+    padding-bottom: 5px;
+   }
 }
 
 .navbar button {
@@ -11,18 +27,29 @@
 }
 
 .logged-out-links {
-  width: 150px;
+  width: 200px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 10px;
   font-size: 14px;
+
+    .nav-link {
+      color: #91c11e;
+    }
+
+    .nav-link:hover {
+      color: #659a41;
+    }
+
 }
+
+
 
 .logged-in-links {
   width: 350px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 10px;
 }

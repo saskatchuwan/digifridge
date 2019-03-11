@@ -6,10 +6,39 @@
     position: absolute;
   }
 
-  h1 {
-    color: #FFFFFF;
+  h2 {
     position: absolute;
+    color: #FFFFFF;
+    font-size: 50px;
+    max-width: 600px;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+    top: 160px;
+    left: 28%;
   }
 
+  .get-started-button {
+    position: absolute;
+    color: #FFFFFF;
+    top: 350px;
+    left: 41.5%;
+    width: 200px;
+    height: 50px;
+    background-color: #91c11e;
+    border: none;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    letter-spacing: 0.09em;
+    font-weight: bold;
+    line-height: 50px;
+  }
+
+
+  .get-started-button:hover {
+    background-color: #659a41;
+  }
   
 }
