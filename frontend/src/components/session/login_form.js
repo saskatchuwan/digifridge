@@ -14,7 +14,6 @@ class LoginForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.renderErrors = this.renderErrors.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
   }
   componentDidMount(){
@@ -52,8 +51,10 @@ class LoginForm extends React.Component {
 
 
   render() {
-    const emailErrorCN = cx({ 'session-errors': this.state.errors.email.includes('user'), 'no-error': this.state.errors.password=== ''}); 
-    const pwErrorCN = cx({ 'session-errors': this.state.errors.password.includes('password'), 'no-error': this.state.errors.password=== ''}) 
+    const emailErrorCN = cx({ 'session-errors': this.state.errors.email.includes('user'), 
+                              'no-error': this.state.errors.password=== ''}); 
+    const pwErrorCN = cx({ 'session-errors': this.state.errors.password.includes('password'), 
+                            'no-error': this.state.errors.password=== ''}); 
     return (
       <div className='login'>
         <form onSubmit={this.handleSubmit}>
@@ -79,12 +80,12 @@ class LoginForm extends React.Component {
               </div>
             </div>
             <div className='session-button'>
-              <input type="submit" value="Submit" />
+              <input type="submit" value="Login" />
             </div>
-
-          </div>
           <div className='session-button'>
             <button onClick={this.handleDemo}>Demo Login</button>
+          </div>
+
           </div>
         </form>
       </div>

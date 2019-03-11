@@ -1,14 +1,24 @@
 .login {
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    
 }
 .login-items {
     display: flex;
     flex-direction: column;
+    align-items: center
 }
 .session-input {
     display: flex;
     flex-direction: column;
     width: 200px;
+    input {
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 5px;
+        width: 200px;
+    }
 }
 .no-error {
     padding: 0px;
@@ -19,6 +29,6 @@
     padding: 10px;
 }
 .session-button {
-    padding-bottom: 10px;
+    
     padding-top: 10px;
 }
