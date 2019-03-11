@@ -7,7 +7,7 @@
     width: 100vw;
     background: #FAFBFC;
     form {
-        margin-top: 15%;
+        margin-top: 5%;
         top: 10%;
         padding: 30px;
         padding-bottom: 5px;
@@ -46,6 +46,7 @@
         border-radius: 3px;
         border: none;
         box-shadow: 0 2px 2px rgba(0,0,0,0.05) inset;
+        outline: none;
        
     }
     input::placeholder {
