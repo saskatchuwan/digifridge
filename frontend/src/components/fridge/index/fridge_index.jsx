@@ -13,7 +13,7 @@ class FridgeIndex extends React.Component {
 
 
   render() {
-    let { foods, deleteUserFood } = this.props;
+    let { foods, deleteUserFood, receiveSelectedFood } = this.props;
 
     let foodItems;
     if (Object.keys(foods).length > 0) {
@@ -22,6 +22,7 @@ class FridgeIndex extends React.Component {
           <FridgeIndexItem
             food={food}
             deleteUserFood={deleteUserFood}
+            receiveSelectedFood={receiveSelectedFood}
           />
         );
       });
