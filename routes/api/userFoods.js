@@ -32,9 +32,12 @@ router.post('/',
             user: req.user.id
         });
 
-        newFood.save().then(food => res.json(food));
-    }
-);
+        newFood.save().then(food => res.json(food))
+                        .catch(err => 
+                            res.status(422).json({uniqueness: 'User can only have one of each food'}
+                            )
+                        );
+    });
 
 router.delete('/:user_food_id', passport.authenticate('jwt', { session: false }),
     (req, res) => {

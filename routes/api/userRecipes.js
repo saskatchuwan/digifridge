@@ -33,7 +33,8 @@ router.post('/',
             source: req.body.source
         });
 
-        newRecipe.save().then(recipe => res.json(recipe));
+        newRecipe.save().then(recipe => res.json(recipe))
+                        .catch(err => res.status(422).json({uniqueness: 'You have already saved this recipe'}));
     }
 );
 
