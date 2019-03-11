@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const users = require("./routes/api/users");
 const userFoods = require('./routes/api/userFoods');
 const userRecipes = require('./routes/api/userRecipes');
+const recipeResults = require('./routes/api/recipeResults');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 
@@ -23,6 +24,7 @@ app.use(bodyParser.json());
 app.use("/api/users", users);
 app.use('/api/userFoods', userFoods);
 app.use('/api/userRecipes', userRecipes);
+app.use('/api/recipeResults', recipeResults);
 
 //app.get("/", (req, res) => res.send("Hello World!!"));
 
