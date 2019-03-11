@@ -1,12 +1,12 @@
 import React from 'react';
 
-const FridgeIndexItem = ({ selectedFoods, food, deleteUserFood, handleSelect }) => {
+const FridgeIndexItem = ({ selectedFoods, food, deleteUserFood, handleSelect, handleDeselect }) => {
   let display;
 
   if (selectedFoods.includes(food.name)) {
     display = <div 
                 className='fridge-index-item' 
-                onClick={() => handleSelect(food.name)}
+                onClick={() => handleDeselect(food.name)}
                 id='selected'
                 key={food._id}>
 

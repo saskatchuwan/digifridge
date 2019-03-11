@@ -14,6 +14,7 @@ import { logout } from './actions/session_actions';
 import { fetchRecipesEdamam, fetchRecipesFood2Fork } from './util/recipes_api_util';
 import {fetchUserFoods, postUserFood, deleteUserFood} from './actions/food_actions';
 import {fetchRecipeSaves, postRecipeSave, deleteRecipeSave} from './actions/recipe_saves_actions';
+import { removeSelectedFood } from './actions/selected_food_actions';
 
 import 'normalize.css';
 
@@ -52,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchRecipeSaves = fetchRecipeSaves;
   window.postRecipeSave = postRecipeSave;
   window.deleteRecipeSave = deleteRecipeSave;
+  window.removeSelectedFood = removeSelectedFood;
   
   const root = document.getElementById('root');
   

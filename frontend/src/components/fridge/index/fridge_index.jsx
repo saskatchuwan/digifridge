@@ -11,6 +11,7 @@ class FridgeIndex extends React.Component {
     };
 
     this.handleSelect = this.handleSelect.bind(this);
+    this.handleDeselect = this.handleDeselect.bind(this);
   }
 
   componentDidMount () {
@@ -34,6 +35,18 @@ class FridgeIndex extends React.Component {
     });
   }
 
+
+  handleDeselect (foodName) {
+    this.props.removeSelectedFood(foodName);
+
+    let newSelectedFoods = this.state.selectedFoods.slice();
+
+    this.setState({
+      selectedFoods: newSelectedFoods.filter(food => food !== foodName)
+    });
+  }
+
+
   render() {
     let { foods, deleteUserFood } = this.props;
 
@@ -45,6 +58,7 @@ class FridgeIndex extends React.Component {
             food={food}
             deleteUserFood={deleteUserFood}
             handleSelect={this.handleSelect}
+            handleDeselect={this.handleDeselect}
             selectedFoods={this.state.selectedFoods}
           />
         );
