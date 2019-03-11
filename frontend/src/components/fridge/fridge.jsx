@@ -7,8 +7,8 @@ class Fridge extends React.Component {
   render() {
     return (
       <div className='fridge-main-container'>
-        <FridgeIndexContainer />
         <FridgeAddItemsContainer />
+        <FridgeIndexContainer />
       </div>
     );
   }

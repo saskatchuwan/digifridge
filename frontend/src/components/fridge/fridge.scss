@@ -3,19 +3,21 @@
   flex-direction: column;
   width: 400px;
   margin-right: 10px;
-  border-radius: 3%;
-  border: 1px solid grey;
+  border-radius: 4%;
+  border: 2px solid #c1c1c1;
+  background-color: white;
 
   .fridge-index-main-container {
-    flex: 3 0;
+    flex: 2.7 0;
     display: flex;
-    flex-direction: column-reverse;
+    border-top: 2px solid #c1c1c1;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 
     .get-recipe-results-button {
       width: 85%;
-      margin-top: 20px;
+      margin-bottom: 25px;
       color: #FFFFFF;
       left: 41.5%;
       height: 35px;
@@ -33,6 +35,7 @@
 
     .get-recipe-results-button:hover {
       background-color: #a0d623;
+      -webkit-transition: background-color 0.3s ease-out;
     }
 
     .fridge-index {
@@ -46,6 +49,7 @@
       overflow: scroll;
 
       .fridge-index-item {
+        color: #64686f;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -57,18 +61,21 @@
         border-radius: 2px;
         position: relative;
 
-          .remove-item-button {
+          .remove-item-button img {
             position: absolute;
-            left: 90%;
+            right: 5%;
+            bottom: 20%;
             display: none;
+            width: 6%;
           }
       }
 
 
       .fridge-index-item:hover {
-        background-color: rgba(171, 223, 241, 0.56);
+        background-color: rgba(154, 207, 224, 0.589);
         cursor: pointer;
-          .remove-item-button {
+        -webkit-transition: background-color 0.2s;
+          .remove-item-button img{
             display: block;
           }
       }
@@ -83,38 +90,61 @@
   
   .fridge-add-items {
     flex: 1 0;
-    border-top: 1px solid grey;
     display: flex;
     flex-direction: column;
     // justify-content: center;
     align-items: center;
-    #fridge-bottom-handle {
-      width: 50px;
-    }
+    position: relative;
 
     .fridge-add-items-input-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      // margin: auto;
+      align-items: center;
+      margin-top: 35px;
       padding-top: 10px;
       width: 85%;
 
+
+
       .add-item-input {
-        // border-radius: 2px;
+        border-radius: 2px;
+        box-shadow: none;
+        border: 1px solid #aaa5a5cc;
         height: 30px;
+        width: 90%;
+      }
+
+      ::placeholder {
+        color: #c3c1c1ab;
+      }
+
+      input {
+        padding-left: 10px;
       }
 
       button {
+        width: 95%;
         height: 30px;
+        margin-top: 5px;
         background-color: rgba(102, 180, 209, 0.8);
         border: 0 transparent;
         cursor: pointer;
-        border-radius: 2px;
+        border-radius: 5px;
+        color: #FFFFFF;
+        left: 41.5%;
+        height: 35px;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        letter-spacing: 0.09em;
+        font-weight: bold;
+        line-height: 35px;
       }
 
       button:hover {
         background-color: rgba(108, 200, 233, 0.8);
+        -webkit-transition: background-color 0.2s;
       }
 
     }
