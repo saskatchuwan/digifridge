@@ -1,4 +1,7 @@
 import { RECEIVE_SELECTED_FOOD } from '../actions/selected_food_actions';
+import _ from 'lodash';
+
+//need to make array unique
 
 const SelectedFoodsReducer = (state = [], action) => {
   Object.freeze(state);
@@ -7,7 +10,7 @@ const SelectedFoodsReducer = (state = [], action) => {
   switch(action.type) {
     case RECEIVE_SELECTED_FOOD:
       newState.push(action.food);
-      return newState;
+      return _.uniq(newState);
     default:
       return state;
   }

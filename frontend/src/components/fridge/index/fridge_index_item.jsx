@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FridgeIndexItem = ({ food, deleteUserFood, receiveSelectedFood, handleRemove }) => {
+const FridgeIndexItem = ({ food, receiveSelectedFood, deleteUserFood}) => {
   return (
     <div 
       className='fridge-index-item' 
@@ -9,7 +9,7 @@ const FridgeIndexItem = ({ food, deleteUserFood, receiveSelectedFood, handleRemo
 
       {food.name}
 
-      <div onClick={handleRemove(food._id)}
+      <div onClick={(e) => {deleteUserFood(food._id); e.stopPropagation()}}
         className='remove-item-button'>
         X
       </div>

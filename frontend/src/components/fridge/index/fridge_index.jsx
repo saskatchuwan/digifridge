@@ -5,22 +5,14 @@ import '../fridge.scss';
 class FridgeIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.handleRemove = this.handleRemove.bind(this);
   }
 
   componentDidMount () {
     this.props.fetchUserFoods();
   }
 
-  handleRemove (foodId) {
-    this.props.deleteUserFood(foodId);
-    return e => {
-      e.stopPropagation();
-    };
-  }
-
   render() {
-    let { foods, deleteUserFood } = this.props;
+    let { foods, deleteUserFood, receiveSelectedFood } = this.props;
 
     let foodItems;
     if (Object.keys(foods).length > 0) {
@@ -30,7 +22,6 @@ class FridgeIndex extends React.Component {
             food={food}
             deleteUserFood={deleteUserFood}
             receiveSelectedFood={receiveSelectedFood}
-            handleRemove={this.handleRemove}
           />
         );
       });
