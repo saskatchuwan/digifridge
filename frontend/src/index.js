@@ -11,10 +11,11 @@ import configureStore from './store/store';
 import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
 
-import { fetchRecipesEdamam, fetchRecipesFood2Fork } from './util/recipes_api_util';
+import { fetchRecipesEdamam } from './util/recipes_api_util';
 import {fetchUserFoods, postUserFood, deleteUserFood} from './actions/food_actions';
 import {fetchRecipeSaves, postRecipeSave, deleteRecipeSave} from './actions/recipe_saves_actions';
-import { removeSelectedFood } from './actions/selected_food_actions';
+import { fetchRecipes } from './actions/recipes_actions';
+import { readableRecipes } from './reducers/recipes_selector';
 
 import 'normalize.css';
 
@@ -46,14 +47,19 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.fetchRecipesEdamam = fetchRecipesEdamam;
-  window.fetchRecipesFood2Fork = fetchRecipesFood2Fork;
+  // window.fetchRecipesFood2Fork = fetchRecipesFood2Fork;
   window.fetchUserFoods = fetchUserFoods;
   window.postUserFood = postUserFood;
   window.deleteUserFood = deleteUserFood;
   window.fetchRecipeSaves = fetchRecipeSaves;
   window.postRecipeSave = postRecipeSave;
   window.deleteRecipeSave = deleteRecipeSave;
+<<<<<<< HEAD
   window.removeSelectedFood = removeSelectedFood;
+=======
+  window.fetchRecipes = fetchRecipes;
+  window.readableRecipes = readableRecipes;
+>>>>>>> master
   
   const root = document.getElementById('root');
   
