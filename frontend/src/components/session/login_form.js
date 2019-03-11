@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import './session.scss';
+import cx from 'classnames';
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -8,26 +10,31 @@ class LoginForm extends React.Component {
     this.state = {
       email: '',
       password: '',
-      errors: {}
+      errors: {password: [], email: []}
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.renderErrors = this.renderErrors.bind(this);
+    // this.renderErrors = this.renderErrors.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
-
+  componentDidMount(){
+    this.props.clearErrors();
+  }
   componentWillReceiveProps(nextProps) {
     if (nextProps.currentUser === true) {
       this.props.history.push('/home');
     }
-
-    this.setState({errors: nextProps.errors});
+    const pw = nextProps.errors.password ? nextProps.errors.password : '';
+    const em = nextProps.errors.email ? nextProps.errors.email : '';
+    this.setState({errors: {password: pw, email: em}});
   }
 
   update(field) {
-    return e => this.setState({
+    
+    return e => {this.setState({
       [field]: e.currentTarget.value
     });
-  }
+  }}
 
   handleSubmit(e) {
     e.preventDefault();
@@ -39,39 +46,45 @@ class LoginForm extends React.Component {
 
     this.props.login(user); 
   }
-
-  renderErrors() {
-    return(
-      <ul>
-        {Object.keys(this.state.errors).map((error, i) => (
-          <li key={`error-${i}`}>
-            {this.state.errors[error]}
-          </li>
-        ))}
-      </ul>
-    );
+  handleDemo(){
+    this.props.login({ email: 'gfieri@foodnetwork.com', password: 'password' });
   }
 
+
   render() {
+    const emailErrorCN = cx({ 'session-errors': this.state.errors.email.includes('user'), 'no-error': this.state.errors.password=== ''}); 
+    const pwErrorCN = cx({ 'session-errors': this.state.errors.password.includes('password'), 'no-error': this.state.errors.password=== ''}) 
     return (
-      <div>
+      <div className='login'>
         <form onSubmit={this.handleSubmit}>
-          <div>
-            <br/>
+          <div className='login-items'>
+            <div className='session-input'>
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
                 placeholder="Email"
               />
-            <br/>
+              <div className={emailErrorCN}>
+                {this.state.errors.email}
+              </div>
+            </div>
+            <div className='session-input'>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 placeholder="Password"
               />
-            <br/>
-            <input type="submit" value="Submit" />
-            {this.renderErrors()}
+              <div className={pwErrorCN}>
+                {this.state.errors.password}
+              </div>
+            </div>
+            <div className='session-button'>
+              <input type="submit" value="Submit" />
+            </div>
+
+          </div>
+          <div className='session-button'>
+            <button onClick={this.handleDemo}>Demo Login</button>
           </div>
         </form>
       </div>
