@@ -30,7 +30,9 @@ router.post('/',
             imgUrl: req.body.imgUrl,
             user: req.user.id,
             description: req.body.description,
-            source: req.body.source
+            source: req.body.source,
+            calories: req.body.calories,
+            healthLabels: req.body.healthLabels
         });
 
         newRecipe.save().then(recipe => res.json(recipe))
