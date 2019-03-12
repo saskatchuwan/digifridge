@@ -7,6 +7,7 @@ import NavBarContainer from './nav/navbar_container';
 import Footer from './footer/footer';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
+import Modal from '../components/modal/modal';
 
 import ProtectedInApp from './protectedInApp';
 
@@ -18,6 +19,7 @@ class App extends React.Component {
     return (
       <div className='in-app-container'>
         <NavBarContainer />
+        <Modal />
 
         <Switch>
           <AuthRoute exact path="/" component={SplashPage} />
