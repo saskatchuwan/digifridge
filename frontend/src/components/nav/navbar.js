@@ -25,6 +25,9 @@ class NavBar extends React.Component {
       if (this.props.loggedIn) {
         return (
             <div className='logged-in-links'>
+              <button onClick={this.props.openModal}>
+                Recipe Preferences
+              </button>
                 <NavLink className='nav-link' to={'/home'}>Recipe Search</NavLink>
                 <NavLink className='nav-link' to={'/saved'}>Saved Recipes</NavLink>
                 <button onClick={this.logoutUser}>Logout</button>
