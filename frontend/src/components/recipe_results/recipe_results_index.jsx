@@ -4,10 +4,6 @@ import './recipe_results.scss';
 import Loading from '../loading/loading';
 
 class RecipeResultsIndex extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     if (this.props.fetch) this.props.fetchRecipeSaves();
   }

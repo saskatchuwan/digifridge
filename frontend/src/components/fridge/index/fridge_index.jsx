@@ -69,6 +69,7 @@ class FridgeIndex extends React.Component {
       foodItems = foods.reverse().map (food => {
         return (
           <FridgeIndexItem
+            key={food._id}
             food={food}
             handleSelect={this.handleSelect}
             handleDeselect={this.handleDeselect}
