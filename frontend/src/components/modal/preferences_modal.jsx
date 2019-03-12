@@ -23,7 +23,7 @@ class PreferencesModal extends React.Component {
   render() {
     return (
       <div className="preferences-form">
-        <h2>Have any dietary restrictions?</h2>
+        <h2 className='modal-title'>Have any dietary restrictions?</h2>
         <p>We'll filter your recipe results by the dietary restrictions you select below.</p>
         <form>
           <label>

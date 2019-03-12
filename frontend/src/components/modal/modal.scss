@@ -24,6 +24,14 @@
 
 .preferences-form {
   margin: 30px;
+
+    .modal-title {
+      text-shadow: none;
+      color: #303236;
+      font-size: 20px;
+      top: 0;
+      text-align: center;
+    }
 }
 
 .modal-child form {
@@ -45,8 +53,9 @@
   border-radius: 5px;
   cursor: pointer;
   padding: 10px;
-  text-transform: uppercase;
-  font-weight: bold;
+  // text-transform: uppercase;
+  // font-weight: bold;
+  font-size: 14px;
   margin-top: 20px;
   width: 200px;
   align-self: center;
