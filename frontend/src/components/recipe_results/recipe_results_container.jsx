@@ -8,7 +8,8 @@ const mapStateToProps = (state) => {
   return {
     recipes: readableRecipes(state),
     buttonText: "Save recipe",
-    fetch: false
+    fetch: false, 
+    loading: state.ui.recipesLoading
   };
 };
 

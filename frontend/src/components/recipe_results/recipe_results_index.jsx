@@ -1,6 +1,7 @@
 import React from 'react';
 import RecipeResultsIndexItem from './recipe_results_index_item';
 import './recipe_results.scss';
+import Loading from '../loading/loading';
 
 class RecipeResultsIndex extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class RecipeResultsIndex extends React.Component {
   }
 
   render() {
-    let { recipes, handleRecipe, buttonText } = this.props;
+    let { recipes, handleRecipe, buttonText, loading } = this.props;
     let recipeItems = recipes.map( recipe => (
       <RecipeResultsIndexItem 
         key={recipe.linkUrl}
@@ -21,10 +22,11 @@ class RecipeResultsIndex extends React.Component {
         buttonText={buttonText}
       />
     ));
+    let content = loading ? <Loading /> : recipeItems
 
     return (
       <div id='recipe-results' className='recipes-main-container'>
-        {recipeItems}
+        {content}
       </div>
     );
   }
