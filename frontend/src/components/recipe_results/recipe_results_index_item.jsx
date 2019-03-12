@@ -1,10 +1,16 @@
 import React from 'react';
 
-// could also destructure the props: ({ album, song, artist, fetchSong })
 const RecipeResultsIndexItem = (props) => {
+  let { recipe, handleRecipe, buttonText } = props;
+
   return (
     <div>
-      im an API recipe item produced by marianna
+      <img src={recipe.imgUrl} />
+      <a href={recipe.linkUrl}>{recipe.title}</a>
+      <div>Thanks to {recipe.source} for this recipe</div>
+      <button onClick={() => handleRecipe(recipe)}>
+        {buttonText}
+      </button>
     </div>
   );
 }

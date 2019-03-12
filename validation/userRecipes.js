@@ -10,7 +10,7 @@ module.exports = function validateRecipeInput(recipe) {
     recipe.description = validText(recipe.description) ? recipe.description : '';
     recipe.source = validText(recipe.source) ? recipe.source : '';
 
-    if (!Validator.isLength(recipe.title, { min: 2, max: 30 })) {
+    if (!Validator.isLength(recipe.title, { min: 2, max: 280 })) {
         errors.handle = 'Food name must be between 2 and 30 characters'
     }
     if (Validator.isEmpty(recipe.title)) {
