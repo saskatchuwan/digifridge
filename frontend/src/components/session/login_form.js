@@ -45,8 +45,13 @@ class LoginForm extends React.Component {
 
     this.props.login(user); 
   }
-  handleDemo(){
-    this.props.login({ email: 'gfieri@foodnetwork.com', password: 'password' });
+  handleDemo(e){
+    e.preventDefault();
+    this.props.clearErrors();
+    let user = {
+      email: 'user9@email.com', password: 'password'
+    };
+    this.props.login(user);
   }
 
 

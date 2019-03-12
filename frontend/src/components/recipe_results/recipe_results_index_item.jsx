@@ -4,7 +4,6 @@ const RecipeResultsIndexItem = (props) => {
 
   let healthLabelItems;
 
-  if (buttonText === 'Save Recipe') {
     healthLabelItems = recipe.healthLabels.map(label => {
       return (
         <>
@@ -13,7 +12,6 @@ const RecipeResultsIndexItem = (props) => {
         </>
       )
     });
-  } 
 
   return (
     <div className='recipe-result-container'>

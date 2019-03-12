@@ -24,7 +24,15 @@ const UserRecipeSchema = new Schema({
     },
     source: {
         type: String,
-        require: false
+        required: false
+    }, 
+    calories: {
+        type: Number,
+        required: false
+    },
+    healthLabels: {
+        type: Array,
+        required: false
     }
 });
 UserRecipeSchema.index({
