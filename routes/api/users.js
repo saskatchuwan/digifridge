@@ -131,7 +131,7 @@ router.post('/preferences', passport.authenticate('jwt', { session: false }), (r
                     res.status(200).send(updatedUser);
                 });
             } else {
-                res.status(200).send('Some response');
+                res.status(200).send('not saved');
             }
         }
     });
