@@ -19,6 +19,31 @@ const UserSchema = new Schema({
     createdAt: {
         type: Date,
         default: Date.now
+    },
+    health: {
+        type: Object,
+        default: {
+            vegan: {
+                name: 'vegan',
+                preferred: false
+            },
+            vegetarian: {
+                name: 'vegetarian',
+                preferred: false
+            },
+            glutenFree: {
+                name: 'gluten-free',
+                preferred: false
+            },
+            dairyFree: {
+                name: 'dairy-free',
+                preferred: false
+            },
+            peanutFree: {
+                name: 'peanut-free',
+                preferred: false
+            },
+        }
     }
 });
 

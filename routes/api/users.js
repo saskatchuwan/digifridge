@@ -1,12 +1,17 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require('bcryptjs');
+const mongoose = require('mongoose');
 const User = require('../../models/User');
+// const User = mongoose.model('user', userSchema);
+
 const jwt = require('jsonwebtoken');
 const keys = require('../../config/keys');
 const validateRegisterInput = require('../../validation/register');
 const validateLoginInput = require('../../validation/login');
 const passport = require('passport');
+const db = require('../../config/keys').mongoURI;
+
 
 
 // router.get("/test", (req, res) => res.json({ msg: "This is the users test route" }));
@@ -88,8 +93,50 @@ router.get('/current', passport.authenticate('jwt', { session: false }), (req, r
     res.json({
         id: req.user.id,
         name: req.user.name,
-        email: req.user.email
+        email: req.user.email,
+        // health: req.user.health
     });
 });
+router.get('/preferences', passport.authenticate('jwt', { session: false }), (req, res) => {
+    res.json({
+        health: req.user.health
+        // health: req.user.health
+    });
+});
+
+router.post('/preferences', passport.authenticate('jwt', { session: false }), (req, res) => {
+ 
+    User.findById(
+        
+        req.user.id, function (err, user) {
+        if (err) {
+            console.log('error');
+        } else {
+            if (user) {
+                const health = req.user.health;
+                const preferences = req.body.health.split(',');
+
+                preferences.forEach(healthString => {
+                    let healthItem = healthString.split(' ');
+                    let healthType = healthItem[0];
+                    let bool = healthItem[1];
+                    health[healthType].preferred = bool;
+                    user.health = health;
+                });
+                
+                user.health = health;
+                user.save(function (err, updatedUser) {
+                    if (err) throw (err);
+
+                    res.status(200).send(updatedUser);
+                });
+            } else {
+                res.status(200).send('Some response');
+            }
+        }
+    });
+});
+
+
 
 module.exports = router;
