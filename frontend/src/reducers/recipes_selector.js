@@ -4,8 +4,11 @@ export const readableRecipes = (state) => {
     let linkUrl = recipeObj.recipe.url;
     let imgUrl = recipeObj.recipe.image;
     let source = recipeObj.recipe.source;
+    let calories = recipeObj.recipe.calories;
+    let healthLabels = recipeObj.recipe.healthLabels;
+    let totalTime = recipeObj.recipe.totalTime;
 
-    return { title, linkUrl, imgUrl, source };
+    return { title, linkUrl, imgUrl, source, calories, healthLabels, totalTime };
   });
 };
 
