@@ -4,13 +4,14 @@
   width: 400px;
   margin-right: 10px;
   border-radius: 4%;
-  border: 2px solid #c1c1c1;
+  // border: 2px solid #c1c1c1;
+  -webkit-box-shadow: 1px 1px 1px 2px rgb(224, 221, 221);
   background-color: white;
 
   .fridge-index-main-container {
     flex: 2.7 0;
     display: flex;
-    border-top: 2px solid #c1c1c1;
+    border-top: 1px solid rgb(224, 221, 221);
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
