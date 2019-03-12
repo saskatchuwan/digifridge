@@ -8,7 +8,7 @@ const mapStateToProps = (state) => {
 
   return {
     recipes: readableRecipeSaves(state),
-    buttonText: "Remove recipe",
+    buttonText: "Remove",
     fetch: true,
   };
 };
