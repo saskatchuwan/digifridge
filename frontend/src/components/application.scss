@@ -1,12 +1,13 @@
 * {
   font-family: 'Raleway', sans-serif;
-  // color: #343434;
   color: #303236;
 }
 
+button:focus {outline: 0;}
+input:focus {outline: 0;}
+
 a, a:hover, a.visited {
   text-decoration: none;
-
 }
 
 //--------------------------------------------------------------------------

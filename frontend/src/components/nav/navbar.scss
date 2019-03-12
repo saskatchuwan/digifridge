@@ -1,7 +1,7 @@
 .navbar {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   border-bottom: 1px solid rgb(236, 230, 230);
   background-color: #FFFFFF;
   height: 70px;
@@ -18,7 +18,7 @@
   }
 
   .logo-icon {
-    padding-bottom: 5px;
+  padding-bottom: 5px;
    }
 }
 
@@ -52,11 +52,50 @@
 
 
 .logged-in-links {
-  width: 350px;
+  width: 500px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 10px;
+  font-size: 14px;
+
+    .content-links {
+      .link {
+        border-right: 1px solid #303236;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+
+      :last-child {
+        border: none;
+      }
+
+      .link:hover {
+        color: #91c11e;
+        -webkit-transition: color 0.2s ease-out;
+      }
+
+      // .active {
+      //   // color: #91c11e;
+      // }
+    }
+  
+  .logout-button {
+    border: 1px solid #c1c1c1;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    color: #999797;
+  }
+
+  .logout-button:hover {
+    background-color: #f7a635de;
+    color: white;
+    -webkit-transition: background-color 0.2s ease-in-out;
+  }
+
 }
 
 

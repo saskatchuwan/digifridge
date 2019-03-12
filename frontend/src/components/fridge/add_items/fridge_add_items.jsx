@@ -35,6 +35,7 @@ class FridgeAddItems extends React.Component {
           <input
             className='add-item-input'
             placeholder='beets'
+            spellCheck='true'
             onChange={this.update('name')}
             value={this.state.name}
             />

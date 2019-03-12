@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import './navbar.scss';
-import cx from 'classnames';
 
 import fridgelogo from '../../images/icons/fridge-round.svg';
 
@@ -20,17 +19,35 @@ class NavBar extends React.Component {
 
   // Selectively render links dependent on whether the user is logged in
   getLinks() {
-    // const loggedInHome = cx('nav-link', {'active': this.props.location.includes('home')});
-    // const loggedInSave = cx('nav-link', { 'active': this.props.location.includes('saved') });
       if (this.props.loggedIn) {
         return (
             <div className='logged-in-links'>
-              <button onClick={this.props.openModal}>
-                Recipe Preferences
-              </button>
-                <NavLink className='nav-link' to={'/home'}>Recipe Search</NavLink>
-                <NavLink className='nav-link' to={'/saved'}>Saved Recipes</NavLink>
-                <button onClick={this.logoutUser}>Logout</button>
+
+              <div className='content-links'>
+                <a href='#' 
+                  className='link recipe-preferences'
+                  onClick={this.props.openModal}>
+                  Recipe Preferences
+                </a>
+
+                <NavLink 
+                  className='link nav-link' 
+                  to={'/home'}>
+                  Recipe Search
+                </NavLink>
+
+                <NavLink 
+                  className='link nav-link' 
+                  to={'/saved'}>
+                  Saved Recipes
+                </NavLink>
+              </div>
+
+              <a href='#'
+                className='link logout-button'
+                onClick={this.logoutUser}>
+                Log Out
+              </a>
             </div>
         );
       } else {
