@@ -10,6 +10,7 @@ const RecipeResultsIndexItem = (props) => {
         target="_blank">
 
         <img src={recipe.imgUrl} />
+        
         <br />
         {recipe.title}
       </a>
