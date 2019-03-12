@@ -1,6 +1,5 @@
-[Live Demo](https://digifridge.herokuapp.com/#/)
-
 # Digifridge
+[Live Demo](https://digifridge.herokuapp.com/#/)
 Digifridge is a digital representation of your fridge. Users make an account and enter the foods they have in stock. A user can select the foods from their fridge they’d look to use, and we’ll return recipes using those foods from the Edamam API (https://developer.edamam.com/edamam-docs-recipe-api)
 
 
