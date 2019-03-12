@@ -1,11 +1,12 @@
 import React from 'react';
-import spinner from './spinner.gif';
+import spinner2 from './spinner2.gif';
+import './loading.scss';
 const Loading = () => {
     return (
-        <div>
+        <div className='loading'>
             <img
-                src={spinner}
-                style={{ width: '150px', margin: 'auto', display: 'block', padding: '30%' }}
+                src={spinner2}
+                style={{ width: '150px'  }}
                 alt="Loading..."
             />
         </div>
