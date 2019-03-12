@@ -58,6 +58,7 @@ class LoginForm extends React.Component {
     return (
       <div className='login'>
         <form onSubmit={this.handleSubmit}>
+          <h3>Log In</h3>
           <div className='login-items'>
             <div className='session-input'>
               <input type="text"
@@ -79,10 +80,11 @@ class LoginForm extends React.Component {
                 {this.state.errors.password}
               </div>
             </div>
-            <div className='session-button'>
-              <input type="submit" value="Login" />
+            <br/>
+            <div className='session-input'>
+              <input id='submit-button' type="submit" value="Login" />
             </div>
-          <div className='session-button'>
+            <div className='session-input'>
             <button onClick={this.handleDemo}>Demo Login</button>
           </div>
 

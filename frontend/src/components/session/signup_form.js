@@ -70,6 +70,7 @@ class SignupForm extends React.Component {
     return (
       <div className="login-form-container login">
         <form onSubmit={this.handleSubmit}>
+        <h3>Sign Up</h3>
           <div className="login-form">
             <div className='session-input'>
               <input type="text"
@@ -111,8 +112,9 @@ class SignupForm extends React.Component {
                 {this.state.errors.password2}
               </div>
               </div>
-              <div className='session-button'>
-                <input type="submit" value="Sign Up" />
+              <br/>
+              <div className='session-input'>
+                <input id='submit-button'type="submit" value="Sign Up" />
               </div>
             
             {/* {this.renderErrors()} */}
