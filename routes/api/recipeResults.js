@@ -10,7 +10,7 @@ router.post('/', (req, res) => {
 
   axios({
     method: 'GET',
-    url: `https://api.edamam.com/search?app_id=${edamamAppId}&app_key=${edamamAppSecret}&q=${queryTerms}`
+    url: `https://api.edamam.com/search?app_id=${edamamAppId}&app_key=${edamamAppSecret}&q=${queryTerms}&to=30`
   }).then( recipes => res.json(recipes.data));
 });
 
