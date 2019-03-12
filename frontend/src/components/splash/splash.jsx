@@ -21,7 +21,7 @@ class SplashPage extends React.Component {
           </video>
 
           <div className='hero-text'>
-            <h2>Make the most with what you have.</h2>
+            <h2 className='splash-title'>Make the most with what you have.</h2>
           </div>
 
           <a href='#/signup' className='get-started-button'>
