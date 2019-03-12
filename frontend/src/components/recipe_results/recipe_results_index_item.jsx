@@ -1,7 +1,20 @@
 import React from 'react';
 const RecipeResultsIndexItem = (props) => {
   let { recipe, handleRecipe, buttonText } = props;
-  // recipe.healthLabels (array)
+
+  let healthLabelItems;
+
+  if (buttonText === 'Save Recipe') {
+    healthLabelItems = recipe.healthLabels.map(label => {
+      return (
+        <>
+          {label}
+          <br />
+        </>
+      )
+    });
+  } 
+
   return (
     <div className='recipe-result-container'>
 
@@ -9,13 +22,32 @@ const RecipeResultsIndexItem = (props) => {
         href={recipe.linkUrl}
         target="_blank">
 
-        <img src={recipe.imgUrl} />
+          <div className='image-display-container'>
+            <div className='image-display'>
+
+                <div className='side'>
+                  <img className='recipe-image' src={recipe.imgUrl} />
+                </div>
+
+                <div className="side back">
+                  <br />
+                  <strong>Nutritional Facts</strong>
+                  <br />
+                  <br />
+                  Calories: {parseInt(recipe.calories)}
+                  <br />
+                  <br />
+                  <br />
+                  { healthLabelItems }
+                </div>
+
+            </div>
+          </div>
         
         <br />
-        {recipe.title}
+        <strong>{recipe.title}</strong>
       </a>
 
-      {/* <span>{recipe.calories}</span> */}
 
       <div className='sub-info'>
         <div className='recipe-source'>Source: {recipe.source}</div>
