@@ -6,9 +6,8 @@ export const readableRecipes = (state) => {
     let source = recipeObj.recipe.source;
     let calories = recipeObj.recipe.calories;
     let healthLabels = recipeObj.recipe.healthLabels;
-    let totalTime = recipeObj.recipe.totalTime;
 
-    return { title, linkUrl, imgUrl, source, calories, healthLabels, totalTime };
+    return { title, linkUrl, imgUrl, source, calories, healthLabels };
   });
 };
 

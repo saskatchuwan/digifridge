@@ -5,12 +5,12 @@ const RecipeResultsIndexItem = (props) => {
   let healthLabelItems;
 
   if (buttonText === 'Save Recipe') {
-    healthLabelItems = recipe.healthLabels.map(label => {
+    healthLabelItems = recipe.healthLabels.map((label, idx) => {
       return (
-        <>
+        <div key={idx}>
           {label}
           <br />
-        </>
+        </div>
       )
     });
   } 
@@ -20,13 +20,14 @@ const RecipeResultsIndexItem = (props) => {
 
       <a className='recipe-result-link'
         href={recipe.linkUrl}
+        rel="noopener noreferrer"
         target="_blank">
 
           <div className='image-display-container'>
             <div className='image-display'>
 
                 <div className='side'>
-                  <img className='recipe-image' src={recipe.imgUrl} />
+                  <img className='recipe-image' src={recipe.imgUrl} alt='no img'/>
                 </div>
 
                 <div className="side back">

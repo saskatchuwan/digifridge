@@ -37,7 +37,7 @@ class SplashPage extends React.Component {
 
         <div className='summary-perks'>
             <div id='stock' className='perk'>
-              <img src={checklist} alt='no image' />
+              <img src={checklist} alt='no img' />
               <br />
               <strong>Keep stock of what's in your fridge.</strong>
               <br />
@@ -46,7 +46,7 @@ class SplashPage extends React.Component {
             </div>
 
             <div id='combos' className='perk'>
-              <img src={food} alt='no image' />
+              <img src={food} alt='no im' />
               <br />
               <strong>Try out wild food combos on the fly.</strong>
               <br />
@@ -55,7 +55,7 @@ class SplashPage extends React.Component {
             </div>
 
             <div id='faves' className='perk'>
-              <img src={cookbook} alt='no image' />
+              <img src={cookbook} alt='no img' />
               <br />
               <strong>Save favorites to your recipe book.</strong>
               <br />
