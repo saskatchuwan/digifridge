@@ -17,7 +17,7 @@ a, a:hover, a.visited {
   display: flex;
   flex-direction: column;
   // justify-content: space-between;
-  // background-color: greenyellow;
+  background-color: #FAFBFC;
   height: 100vh;
 }
 
@@ -39,6 +39,7 @@ a, a:hover, a.visited {
     width: 1000px;
     border-radius: 2%;
     border: 1px solid grey;
+    background-color: white;
   }
 }
 

@@ -3,6 +3,7 @@ import FridgeIndexItem from './fridge_index_item';
 import '../fridge.scss';
 import _ from 'lodash';
 
+
 class FridgeIndex extends React.Component {
   constructor(props) {
     super(props);
@@ -64,7 +65,7 @@ class FridgeIndex extends React.Component {
 
     let foodItems;
     if (Object.keys(foods).length > 0) {
-      foodItems = foods.map (food => {
+      foodItems = foods.reverse().map (food => {
         return (
           <FridgeIndexItem
             food={food}
