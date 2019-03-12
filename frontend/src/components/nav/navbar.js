@@ -1,6 +1,7 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import './navbar.scss';
+import cx from 'classnames';
 
 import fridgelogo from '../../images/icons/fridge-round.svg';
 
@@ -19,6 +20,8 @@ class NavBar extends React.Component {
 
   // Selectively render links dependent on whether the user is logged in
   getLinks() {
+    // const loggedInHome = cx('nav-link', {'active': this.props.location.includes('home')});
+    // const loggedInSave = cx('nav-link', { 'active': this.props.location.includes('saved') });
       if (this.props.loggedIn) {
         return (
             <div className='logged-in-links'>
@@ -30,8 +33,8 @@ class NavBar extends React.Component {
       } else {
         return (
             <div className='logged-out-links'>
-                <NavLink className='nav-link login' to={'/login'}>LOGIN</NavLink>
-                <NavLink className='nav-link signup' to={'/signup'}>SIGNUP</NavLink>
+              <NavLink className='nav-link' to={'/login'}>LOGIN</NavLink>
+              <NavLink className='nav-link' to={'/signup'}>SIGNUP</NavLink>
             </div>
         );
       }
@@ -50,4 +53,4 @@ class NavBar extends React.Component {
   }
 }
 
-export default NavBar;
+export default withRouter(NavBar);
