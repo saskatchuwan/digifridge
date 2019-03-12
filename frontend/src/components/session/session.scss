@@ -34,7 +34,7 @@
 .session-input {
     display: flex;
     flex-direction: column;
-    font-size: 12px;
+    font-size: 13px;
 
     input, button {
         height: 40px;
@@ -52,7 +52,7 @@
         outline: none;
     }
     input::placeholder {
-        font-size: 12px;
+        font-size: 13px;
         color: #959ba5;
     }
     button, #submit-button {
