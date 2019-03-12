@@ -1,7 +1,9 @@
-.splash-main {
-  position: relative;
 
-  .video-hero video{
+.video-hero  {
+    position: relative;
+  }
+  
+  video {
     width: 100vw;
     position: absolute;
   }
@@ -41,7 +43,6 @@
     background-color: #659a41;
   }
   
-}
 
 .main-description {
   position: absolute;
@@ -51,6 +52,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
   
   .heading {
     font-size: 40px;
@@ -60,7 +62,7 @@
   .summary-perks {
     display: flex;
     justify-content: space-between;
-    background-color: #FAFBFC;
+    background-color: transparent;
 
     .perk {
       width: 300px;
@@ -79,6 +81,5 @@
         margin-bottom: 7px;
       }
     }
-
   }
 }
