@@ -5,7 +5,7 @@ import FoodsReducer from './foods_reducer';
 import RecipesReducer from './recipes_reducer';
 import RecipeSavesReducer from './recipe_saves_reducer';
 import SelectedFoodsReducer from './selected_foods_reducer';
-import { uiReducer } from './ui_reducer';
+import UIReducer from './ui_reducer';
 
 
 const RootReducer = combineReducers({
@@ -15,7 +15,7 @@ const RootReducer = combineReducers({
   recipeSaves: RecipeSavesReducer,
   errors: ErrorsReducer,
   session: SessionReducer,
-  ui: uiReducer,
+  ui: UIReducer
 });
 
 export default RootReducer;
