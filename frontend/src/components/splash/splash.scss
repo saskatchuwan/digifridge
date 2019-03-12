@@ -9,11 +9,11 @@
   h2 {
     position: absolute;
     color: #FFFFFF;
-    font-size: 50px;
-    max-width: 600px;
+    font-size: 65px;
+    max-width: 650px;
     text-align: center;
     text-shadow: 1px 1px 3px black;
-    top: 160px;
+    top: 120px;
     left: 28%;
   }
 
@@ -21,7 +21,7 @@
     position: absolute;
     color: #FFFFFF;
     top: 350px;
-    left: 41.5%;
+    left: 43%;
     width: 200px;
     height: 50px;
     background-color: #91c11e;
@@ -41,4 +41,44 @@
     background-color: #659a41;
   }
   
+}
+
+.main-description {
+  position: absolute;
+  width: 100vw;
+  top: 87%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  .heading {
+    font-size: 40px;
+    // font-weight: bold;
+  }
+
+  .summary-perks {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FAFBFC;
+
+    .perk {
+      width: 300px;
+      margin-top: 5px;
+      margin-left: 50px;
+      margin-right: 50px;
+      text-align: center;
+
+      strong {
+        font-weight: bold;
+
+      }
+
+      img {
+        width: 130px;
+        margin-bottom: 7px;
+      }
+    }
+
+  }
 }
