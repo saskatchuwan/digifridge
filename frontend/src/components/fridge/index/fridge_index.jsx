@@ -2,6 +2,7 @@ import React from 'react';
 import FridgeIndexItem from './fridge_index_item';
 import '../fridge.scss';
 import _ from 'lodash';
+import {withRouter, Redirect} from 'react-router-dom';
 
 
 class FridgeIndex extends React.Component {
@@ -57,6 +58,9 @@ class FridgeIndex extends React.Component {
   handleFetchRecipes() {
     let queryTerms = this.state.selectedFoods.join(",");
     this.props.fetchRecipes(queryTerms);
+    if (this.props.location.pathname.includes('saved')) {
+      this.props.history.push('/home');
+    }
   }
 
 
@@ -96,4 +100,4 @@ class FridgeIndex extends React.Component {
   }
 }
 
-export default FridgeIndex;
+export default withRouter(FridgeIndex);
