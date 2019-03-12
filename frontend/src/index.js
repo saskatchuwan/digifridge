@@ -16,6 +16,7 @@ import {fetchUserFoods, postUserFood, deleteUserFood} from './actions/food_actio
 import {fetchRecipeSaves, postRecipeSave, deleteRecipeSave} from './actions/recipe_saves_actions';
 import { fetchRecipes } from './actions/recipes_actions';
 import { readableRecipes } from './reducers/recipes_selector';
+import { fetchPreferences, postPreferences } from './actions/preferences_actions';
 
 import 'normalize.css';
 
@@ -56,6 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.deleteRecipeSave = deleteRecipeSave;
   window.fetchRecipes = fetchRecipes;
   window.readableRecipes = readableRecipes;
+  window.fetchPreferences = fetchPreferences;
+  window.postPreferences = postPreferences;
   
   const root = document.getElementById('root');
   

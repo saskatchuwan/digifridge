@@ -19,6 +19,7 @@ class FridgeIndex extends React.Component {
 
   componentDidMount () {
     this.props.fetchUserFoods();
+    this.props.fetchPreferences();
   }
 
   componentDidUpdate (prevProps) {
