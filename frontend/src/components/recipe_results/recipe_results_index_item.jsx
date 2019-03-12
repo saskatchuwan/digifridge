@@ -4,7 +4,7 @@ const RecipeResultsIndexItem = (props) => {
 
   let healthLabelItems;
 
-    healthLabelItems = recipe.healthLabels.map(label => {
+    healthLabelItems = recipe.healthLabels.map((label, idx) => {
       return (
         <div key={idx}>
           {label}
