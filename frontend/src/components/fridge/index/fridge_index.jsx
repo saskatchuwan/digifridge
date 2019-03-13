@@ -57,7 +57,8 @@ class FridgeIndex extends React.Component {
 
   handleFetchRecipes() {
     let queryTerms = this.state.selectedFoods.join(",");
-    this.props.fetchRecipes(queryTerms);
+    console.log(this.props.preferencesStr);
+    this.props.fetchRecipes(queryTerms, this.props.preferencesStr);
   }
 
 

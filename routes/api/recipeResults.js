@@ -7,10 +7,12 @@ const axios = require('axios');
 
 router.post('/', (req, res) => {
   const queryTerms = req.body.queryTerms;
+  const preferences = req.body.preferencesStr;
+  console.log(req.body)
 
   axios({
     method: 'GET',
-    url: `https://api.edamam.com/search?app_id=${edamamAppId}&app_key=${edamamAppSecret}&q=${queryTerms}&to=30`
+    url: `https://api.edamam.com/search?app_id=${edamamAppId}&app_key=${edamamAppSecret}&q=${queryTerms}&to=30${preferences}`
   }).then( recipes => res.json(recipes.data));
 });
 

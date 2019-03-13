@@ -8,11 +8,11 @@ class PreferencesModal extends React.Component {
     let { vegan, vegetarian, glutenFree, peanutFree, dairyFree } = this.props.preferences;
 
     this.state = {
-      vegan: vegan.preferred == "true",
-      vegetarian: vegetarian.preferred == "true",
-      glutenFree: glutenFree.preferred == "true",
-      peanutFree: peanutFree.preferred == "true",
-      dairyFree: dairyFree.preferred == "true"
+      vegan: vegan.preferred === "true",
+      vegetarian: vegetarian.preferred === "true",
+      glutenFree: glutenFree.preferred === "true",
+      peanutFree: peanutFree.preferred === "true",
+      dairyFree: dairyFree.preferred === "true"
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);

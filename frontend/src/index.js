@@ -17,6 +17,7 @@ import {fetchRecipeSaves, postRecipeSave, deleteRecipeSave} from './actions/reci
 import { fetchRecipes } from './actions/recipes_actions';
 import { readableRecipes } from './reducers/recipes_selector';
 import { fetchPreferences, postPreferences } from './actions/preferences_actions';
+import { stringifyPreferences } from './reducers/preferences_selector';
 
 import 'normalize.css';
 
@@ -59,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.readableRecipes = readableRecipes;
   window.fetchPreferences = fetchPreferences;
   window.postPreferences = postPreferences;
+  window.stringifyPreferences = stringifyPreferences;
   
   const root = document.getElementById('root');
   
