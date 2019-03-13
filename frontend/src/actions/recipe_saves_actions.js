@@ -1,6 +1,6 @@
 import * as RecipeSaveApiUtil from '../util/recipe_saves_api_util';
 export const RECEIVE_RECIPE_SAVES = 'RECEIVE_RECIPE_SAVES';
-export const RECEIVE_RECIPE_SAVE = 'RECEIVE_RECEIPE_SAVE';
+export const RECEIVE_RECIPE_SAVE = 'RECEIVE_RECIPE_SAVE';
 export const REMOVE_RECIPE_SAVE = 'REMOVE_RECIPE_SAVE';
 
 const receiveRecipeSaves = recipes => ({
