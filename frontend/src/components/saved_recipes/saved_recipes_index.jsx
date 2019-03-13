@@ -1,5 +1,6 @@
 import React from 'react';
 import SavedRecipesIndexItem from './saved_recipes_index_item';
+import loading from '../loading/loading';
 import './saved_recipes.scss';
 
 class SavedRecipesIndex extends React.Component {
@@ -11,7 +12,7 @@ class SavedRecipesIndex extends React.Component {
 
 
   render() {
-
+    
     return (
       <div id='saved-recipes' className='recipes-main-container'>
         {/* need to create list of saved recipe index items */}

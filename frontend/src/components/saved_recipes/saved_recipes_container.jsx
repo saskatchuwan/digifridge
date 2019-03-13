@@ -10,6 +10,7 @@ const mapStateToProps = (state) => {
     recipes: readableRecipeSaves(state),
     buttonText: "Remove",
     fetch: true,
+    loading: state.ui.savesLoading
   };
 };
 
