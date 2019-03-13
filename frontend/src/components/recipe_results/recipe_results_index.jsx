@@ -11,7 +11,7 @@ class RecipeResultsIndex extends React.Component {
   }
 
   render() {
-    let { recipes, handleRecipe, buttonText, loading } = this.props;
+    let { recipes, handleRecipe, buttonText, loading, savesLoading } = this.props;
     let recipeItems;
 
     if (Object.keys(recipes).length === 0 && buttonText==='Save') {
@@ -28,7 +28,7 @@ class RecipeResultsIndex extends React.Component {
         />
       ));  
     }
-    let content = loading ? <Loading /> : recipeItems
+    let content = loading || savesLoading ? <Loading /> : recipeItems
 
     return (
       <div id='recipe-results' className='recipes-main-container'>

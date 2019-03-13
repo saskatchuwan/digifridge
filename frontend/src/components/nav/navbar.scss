@@ -40,9 +40,10 @@
       color: #91c11e;
     }
 
-    .nav-link:hover {
-      color: #659a41;
-    }
+    // .nav-link:hover {
+    //   color: #659a41;
+      
+    // }
     
     .active{
         border-bottom: 1px solid#659a41;
@@ -68,13 +69,14 @@
         margin-left: 15px;
       }
 
-      :last-child {
-        border: none;
-      }
+      // :last-child {
+      //   // border: none;
+      // }
 
       .link:hover {
         color: #91c11e;
         -webkit-transition: color 0.2s ease-out;
+        
       }
 
       // .active {
@@ -105,5 +107,6 @@
 }
 .selected-link:hover{
   color: black;
+  
 }
 

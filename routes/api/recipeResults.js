@@ -8,7 +8,6 @@ const axios = require('axios');
 router.post('/', (req, res) => {
   const queryTerms = req.body.queryTerms;
   const preferences = req.body.preferencesStr;
-  console.log(req.body)
 
   axios({
     method: 'GET',

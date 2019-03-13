@@ -5,7 +5,7 @@ import LoginForm from './login_form';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    // location: ownProps.location.pathname,
+    location: ownProps.location.pathname,
     errors: state.errors.session
   };
 };
