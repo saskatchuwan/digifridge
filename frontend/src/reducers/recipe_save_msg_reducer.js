@@ -8,7 +8,7 @@ const RecipeSaveMsgReducer = (state="", action) => {
         case REMOVE_RECIPE_SAVE:
             return "Removed from saved recipes.";
         default:
-            return state;
+            return "";
     }
 };
 

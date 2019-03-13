@@ -45,4 +45,36 @@ a, a:hover, a.visited {
 }
 
 
+//---------------------------------------------------------------------------
+//top notification on save/remove click
+//---------------------------------------------------------------------------
+
+
+#note {
+    position: absolute;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(108, 200, 233, 0.8);
+    text-align: center;
+    line-height: 2.1;
+    overflow: hidden; 
+    box-shadow: 0 0 5px rgb(104, 102, 102);
+    display: none;
+    color: #303236;
+    font-size: 14px;
+}
+
+@-webkit-keyframes slideDown {
+    0%, 100% { -webkit-transform: translateY(-50px); }
+    10%, 90% { -webkit-transform: translateY(0px); }
+}
+@-moz-keyframes slideDown {
+    0%, 100% { -moz-transform: translateY(-50px); }
+    10%, 90% { -moz-transform: translateY(0px); }
+}
+
+
+
 
