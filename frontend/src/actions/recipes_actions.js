@@ -2,6 +2,7 @@ import * as RecipeApiUtil from '../util/recipes_api_util';
 export const RECEIVE_RECIPES = 'RECEIVE_RECIPES';
 export const RECIPES_LOADING = 'RECIPES_LOADING';
 
+
 const recipesLoading = () => ({
   type: RECIPES_LOADING
 });

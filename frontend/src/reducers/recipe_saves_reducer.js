@@ -2,6 +2,7 @@ import _ from 'lodash';
 import {RECEIVE_RECIPE_SAVES, 
         RECEIVE_RECIPE_SAVE, 
         REMOVE_RECIPE_SAVE} from '../actions/recipe_saves_actions';
+import {CLEAR_RECIPE_SAVES} from '../actions/session_actions';
 
 const RecipeSavesReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -16,6 +17,8 @@ const RecipeSavesReducer = (state = {}, action) => {
       let newState = _.merge({}, state);
       delete newState[action.id];
       return newState;
+    case CLEAR_RECIPE_SAVES:
+      return {};
     default:
       return state;
   }

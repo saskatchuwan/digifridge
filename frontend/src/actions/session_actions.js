@@ -7,6 +7,9 @@ export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 export const RECEIVE_USER_LOGOUT = "RECEIVE_USER_LOGOUT";
 export const RECEIVE_USER_SIGN_IN = "RECEIVE_USER_SIGN_IN";
 export const CLEAR_SESSION_ERRORS = 'CLEAR_SESSION_ERRORS';
+export const CLEAR_RECIPES = 'CLEAR_RECIPES';
+export const CLEAR_RECIPE_SAVES = 'CLEAR_RECIPE_SAVES';
+export const CLEAR_FOODS = 'CLEAR_FOODS';
 
 // We'll dispatch this when our user signs in
 export const receiveCurrentUser = currentUser => ({
@@ -33,17 +36,36 @@ export const logoutUser = () => ({
 export const clearSessionErrors = () => ({
     type: CLEAR_SESSION_ERRORS
 });
+
+export const clearRecipeSaves = () => ({
+    type: CLEAR_RECIPE_SAVES
+});
+
+export const clearRecipes = () => ({
+    type: CLEAR_RECIPES
+});
+
+export const clearFoods = () => ({
+    type: CLEAR_FOODS
+});
+
 // Upon signup, dispatch the approporiate action depending on which type of response we receieve from the backend
-export const signup = user => dispatch => (
+export const signup = user => dispatch => {
+    dispatch(clearRecipeSaves());
+    dispatch(clearRecipes());
+    dispatch(clearFoods());
     APIUtil.signup(user).then(() => (
         dispatch(receiveUserSignIn())
     ), err => (
         dispatch(receiveErrors(err.response.data))
-    ))
-);
+    ));
+};
 
 // Upon login, set the session token and dispatch the current user. Dispatch errors on failure.
-export const login = user => dispatch => (
+export const login = user => dispatch => {
+    dispatch(clearRecipeSaves());
+    dispatch(clearRecipes());
+    dispatch(clearFoods());
     APIUtil.login(user).then(res => {
         const { token } = res.data;
         localStorage.setItem('jwtToken', token);
@@ -54,7 +76,7 @@ export const login = user => dispatch => (
     .catch(err => {
         dispatch(receiveErrors(err.response.data));
     })
-);
+};
 
 // We wrote this one earlier
 export const logout = () => dispatch => {
