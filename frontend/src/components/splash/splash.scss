@@ -1,53 +1,70 @@
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  justify-content: space-between;
+  width: 100%;
 
-.video-hero  {
-    position: relative;
+  .video-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+
+
+    video {
+      width:100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  
+    .hero-text {
+      text-align: center;
+      max-width: 650px;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+
+      .splash-title {
+        color: #FFFFFF;
+        font-size: 4.5vw;
+        text-shadow: 1px 1px 3px black;
+      }
+
+      .get-started-button {
+        color: #FFFFFF;
+        width: 15vw;
+        height: 4vw;
+        background-color: #91c11e;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        border-radius: 5px;
+        letter-spacing: 0.09em;
+        font-weight: bold;
+        line-height: 4vw;
+        font-size: 1.1vw;
+      }
+
+      .get-started-button:hover {
+        background-color: #659a41;
+      }
+    }
   }
   
-  video {
-    width: 100vw;
-    position: absolute;
-  }
-
-  .splash-title {
-    position: absolute;
-    color: #FFFFFF;
-    font-size: 65px;
-    max-width: 650px;
-    text-align: center;
-    text-shadow: 1px 1px 3px black;
-    top: 120px;
-    left: 28%;
-  }
-
-  .get-started-button {
-    position: absolute;
-    color: #FFFFFF;
-    top: 350px;
-    left: 43%;
-    width: 200px;
-    height: 50px;
-    background-color: #91c11e;
-    border: none;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    border-radius: 5px;
-    letter-spacing: 0.09em;
-    font-weight: bold;
-    line-height: 50px;
-  }
-
-
-  .get-started-button:hover {
-    background-color: #659a41;
-  }
+  
   
 
 .main-description {
-  position: absolute;
+  // position: absolute;
   width: 100vw;
-  top: 87%;
+  // top: 87%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -83,3 +100,9 @@
     }
   }
 }
+
+
+
+}
+
+

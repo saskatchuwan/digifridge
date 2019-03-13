@@ -8,7 +8,7 @@ class SplashPage extends React.Component {
 
   render() {
     return (
-      <>
+      <div className="splash-container">
         <div className='video-hero'>
           <video poster="https://image-service.blueapron.com/render/q/quality/75/src/https%3A%2F%2Fmedia.blueapron.com%2Fhome_page%2FSplash%2Fbrand-hero-poster.jpg" 
                   preload="auto" 
@@ -22,11 +22,13 @@ class SplashPage extends React.Component {
 
           <div className='hero-text'>
             <h2 className='splash-title'>Make the most with what you have.</h2>
+
+            <a href='#/signup' className='get-started-button'>
+            GET STARTED
+            </a>
           </div>
 
-          <a href='#/signup' className='get-started-button'>
-            GET STARTED
-          </a>
+
         </div>
 
 
@@ -65,7 +67,7 @@ class SplashPage extends React.Component {
         </div>
       </div>
 
-    </>
+    </div>
 
 
 
