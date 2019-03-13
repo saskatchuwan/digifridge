@@ -10,7 +10,8 @@ const mapStateToProps = (state) => {
     buttonText: "Save",
     fetch: false, 
     loading: state.ui.recipesLoading,
-    savesLoading: state.ui.savesLoading
+    savesLoading: state.ui.savesLoading,
+    recipesFetched: state.ui.recipesFetched
   };
 };
 
