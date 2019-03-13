@@ -1,6 +1,6 @@
 import React from 'react';
 const RecipeResultsIndexItem = (props) => {
-  let { recipe, handleRecipe, buttonText } = props;
+  let { recipe, handleRecipe, buttonText, showNotification, handleClick } = props;
 
   let healthLabelItems;
 
@@ -15,7 +15,6 @@ const RecipeResultsIndexItem = (props) => {
 
   return (
     <div className='recipe-result-container'>
-
       <a className='recipe-result-link'
         href={recipe.linkUrl}
         rel="noopener noreferrer"
@@ -52,7 +51,7 @@ const RecipeResultsIndexItem = (props) => {
         <div className='recipe-source'>Source: {recipe.source}</div>
 
         <button
-          onClick={() => handleRecipe(recipe)}>
+          onClick={() => handleClick(recipe)}>
           {buttonText}
         </button>
       </div>
