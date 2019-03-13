@@ -32,11 +32,13 @@ class PreferencesModal extends React.Component {
     ));
     
     this.props.postPreferences(toString.join(","));
+    this.props.closeModal();
   }
 
   render() {
     return (
       <div className="preferences-form">
+        <h2 className="close-modal" onClick={this.props.closeModal}>x</h2>
         <h2 className='modal-title'>Have any dietary restrictions?</h2>
         <p>We'll filter your recipe results by the dietary restrictions you select below.</p>
         <form onSubmit={this.handleSubmit}>

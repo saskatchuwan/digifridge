@@ -7,7 +7,6 @@ const recipesLoading = () => ({
 });
 
 export const fetchRecipes = (queryTerms, preferencesStr) => dispatch => {
-  console.log("preferencesStr", preferencesStr);
   dispatch(recipesLoading());
   RecipeApiUtil.fetchRecipesEdamam(queryTerms, preferencesStr)
     .then(recipes => dispatch(receiveRecipes(recipes.data.hits)));
