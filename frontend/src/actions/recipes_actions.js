@@ -6,10 +6,11 @@ const recipesLoading = () => ({
   type: RECIPES_LOADING
 });
 
-export const fetchRecipes = (queryTerms) => dispatch => {
+export const fetchRecipes = (queryTerms, preferencesStr) => dispatch => {
+  console.log("preferencesStr", preferencesStr);
   dispatch(recipesLoading());
-  RecipeApiUtil.fetchRecipesEdamam(queryTerms)
-    .then(recipes => dispatch(receiveRecipes(recipes.data.hits)))
+  RecipeApiUtil.fetchRecipesEdamam(queryTerms, preferencesStr)
+    .then(recipes => dispatch(receiveRecipes(recipes.data.hits)));
 };
 
 const receiveRecipes = recipes => ({

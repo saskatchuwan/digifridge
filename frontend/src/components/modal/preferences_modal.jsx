@@ -5,13 +5,17 @@ class PreferencesModal extends React.Component {
   constructor(props) {
     super(props);
 
+    let { vegan, vegetarian, glutenFree, peanutFree, dairyFree } = this.props.preferences;
+
     this.state = {
-      vegan: true,
-      vegetarian: true,
-      glutenFree: true,
-      peanutFree: true,
-      dairyFree: true
+      vegan: vegan.preferred === "true",
+      vegetarian: vegetarian.preferred === "true",
+      glutenFree: glutenFree.preferred === "true",
+      peanutFree: peanutFree.preferred === "true",
+      dairyFree: dairyFree.preferred === "true"
     };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleToggle(field) {
@@ -20,12 +24,22 @@ class PreferencesModal extends React.Component {
     };
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+
+    let toString = Object.keys(this.state).map( key => (
+      `${key} ${this.state[key]}`
+    ));
+    
+    this.props.postPreferences(toString.join(","));
+  }
+
   render() {
     return (
       <div className="preferences-form">
         <h2 className='modal-title'>Have any dietary restrictions?</h2>
         <p>We'll filter your recipe results by the dietary restrictions you select below.</p>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label>
             <Toggle
               className='toggle'
@@ -42,28 +56,28 @@ class PreferencesModal extends React.Component {
             <span>Vegan</span>
           </label>
 
-          <label>
+          <label className='dead-link'>
             <Toggle
-              className='toggle'
+              className='toggle dead-link'
               defaultChecked={this.state.glutenFree}
               onChange={this.handleToggle("glutenFree")} />
-            <span>Gluten-Free</span>
+            <span className='dead-link'>Gluten-Free</span>
           </label>
 
-          <label>
+          <label className='dead-link'>
             <Toggle
-              className='toggle'
+              className='toggle dead-link'
               defaultChecked={this.state.peanutFree}
               onChange={this.handleToggle("peanutFree")} />
-            <span>Peanut-Free</span>
+            <span className='dead-link'>Peanut-Free</span>
           </label>
 
-          <label>
+          <label className='dead-link'>
             <Toggle
-              className='toggle'
+              className='toggle dead-link'
               defaultChecked={this.state.dairyFree}
               onChange={this.handleToggle("dairyFree")} />
-            <span>Dairy-Free</span>
+            <span className='dead-link'>Dairy-Free</span>
           </label>
 
           <input 

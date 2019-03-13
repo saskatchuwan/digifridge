@@ -20,6 +20,7 @@ class FridgeIndex extends React.Component {
 
   componentDidMount () {
     this.props.fetchUserFoods();
+    this.props.fetchPreferences();
   }
 
   componentDidUpdate (prevProps) {
@@ -57,7 +58,8 @@ class FridgeIndex extends React.Component {
 
   handleFetchRecipes() {
     let queryTerms = this.state.selectedFoods.join(",");
-    this.props.fetchRecipes(queryTerms);
+    this.props.fetchRecipes(queryTerms, this.props.preferencesStr);
+
     if (this.props.location.pathname.includes('saved')) {
       this.props.history.push('/home');
     }
