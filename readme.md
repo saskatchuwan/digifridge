@@ -1,6 +1,7 @@
 # Digifridge
-[Live Demo](https://digifridge.herokuapp.com/#/) - 
-Digifridge is a digital representation of your fridge and a dynamic recipe recommender. Users make an account and enter the foods they have in stock. A user can select the foods from their fridge they’d look to use, and we’ll return recipes using those foods from the Edamam API (https://developer.edamam.com/edamam-docs-recipe-api)
+[Live Demo](https://digifridge.herokuapp.com/#/)
+
+Digifridge is a digital representation of your fridge and a dynamic recipe recommender. Users make an account and enter the foods they have in stock. A user can select the foods from their fridge they’d like to use, and we’ll return recipes using those foods from the [Edamam API](https://developer.edamam.com/edamam-docs-recipe-api).
 
 
 ## Functionality and MVP
@@ -22,8 +23,10 @@ Digifridge is a digital representation of your fridge and a dynamic recipe recom
 
 ## Technologies and Technical Challenges
 
-Digifridge was built using the MERN stack. In addition, we used the Edamam API for recipe selection.
-(https://developer.edamam.com/edamam-docs-recipe-api)
+Digifridge was built using the MERN stack. In addition, we used the [Edamam API](https://developer.edamam.com/edamam-docs-recipe-api) for recipe selection.
+
+
+<img src="https://ceoclub.bg/angels/wp-content/uploads/2015/06/edamam-768x512.jpg" alt="edamam logo" width="25%" height="10%"/>
 
 ## Collaborators
 + [Alicia](https://github.com/aliciavissuet)
