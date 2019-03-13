@@ -10,6 +10,7 @@ export const CLEAR_SESSION_ERRORS = 'CLEAR_SESSION_ERRORS';
 export const CLEAR_RECIPES = 'CLEAR_RECIPES';
 export const CLEAR_RECIPE_SAVES = 'CLEAR_RECIPE_SAVES';
 export const RECIPES_NOT_FETCHED = 'RECIPES_NOT_FETCHED';
+export const CLEAR_FOODS = 'CLEAR_FOODS';
 
 // We'll dispatch this when our user signs in
 export const receiveCurrentUser = currentUser => ({
@@ -48,11 +49,16 @@ export const clearRecipes = () => ({
 export const recipesNotFetched = () => ({
     type: RECIPES_NOT_FETCHED
 });
+export const clearFoods = () => ({
+    type: CLEAR_FOODS
+});
+
 // Upon signup, dispatch the approporiate action depending on which type of response we receieve from the backend
 export const signup = user => dispatch => {
     dispatch(clearRecipeSaves());
     dispatch(clearRecipes());
     dispatch(recipesNotFetched());
+    dispatch(clearFoods());
     APIUtil.signup(user).then(() => (
         dispatch(receiveUserSignIn())
     ), err => (
@@ -65,6 +71,7 @@ export const login = user => dispatch => {
     dispatch(clearRecipeSaves());
     dispatch(clearRecipes());
     dispatch(recipesNotFetched());
+    dispatch(clearFoods());
     APIUtil.login(user).then(res => {
         const { token } = res.data;
         localStorage.setItem('jwtToken', token);

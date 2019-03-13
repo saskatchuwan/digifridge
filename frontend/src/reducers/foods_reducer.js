@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import {RECEIVE_USER_FOODS, RECEIVE_USER_FOOD, REMOVE_USER_FOOD} from '../actions/food_actions';
+import { CLEAR_FOODS } from '../actions/session_actions';
 
 const FoodsReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -16,6 +17,9 @@ const FoodsReducer = (state = {}, action) => {
       let newState = _.merge({}, state);
       delete newState[action.id];
       return newState;
+
+    case CLEAR_FOODS:
+      return {};
 
     default:
       return state;
