@@ -2,6 +2,8 @@ import React from 'react';
 import RecipeResultsIndexItem from './recipe_results_index_item';
 import './recipe_results.scss';
 import Loading from '../loading/loading';
+import RecipeResultsPlaceholder from './recipe_results_placeholder';
+import RecipeSavesPlaceholder from '../saved_recipes/recipe_saves_placeholder';
 
 class RecipeResultsIndex extends React.Component {
   componentDidMount() {
@@ -10,14 +12,22 @@ class RecipeResultsIndex extends React.Component {
 
   render() {
     let { recipes, handleRecipe, buttonText, loading } = this.props;
-    let recipeItems = recipes.map( recipe => (
-      <RecipeResultsIndexItem 
-        key={recipe.linkUrl}
-        recipe={recipe}
-        handleRecipe={handleRecipe}
-        buttonText={buttonText}
-      />
-    ));
+    let recipeItems;
+
+    if (Object.keys(recipes).length === 0 && buttonText==='Save Recipe') {
+      recipeItems = <RecipeResultsPlaceholder />;
+    } else if (Object.keys(recipes).length === 0 && buttonText==='Remove') {
+      recipeItems = <RecipeSavesPlaceholder />;
+    } else {
+      recipeItems = recipes.map( recipe => (
+        <RecipeResultsIndexItem 
+          key={recipe.linkUrl}
+          recipe={recipe}
+          handleRecipe={handleRecipe}
+          buttonText={buttonText}
+        />
+      ));  
+    }
     let content = loading ? <Loading /> : recipeItems
 
     return (

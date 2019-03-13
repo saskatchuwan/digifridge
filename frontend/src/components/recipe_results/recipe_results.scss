@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   overflow: scroll;
 
+
     strong {
       font-weight: bold;
     }
@@ -13,10 +14,10 @@
       align-items: center;
       height: 300px;
       width: 250px;
-      margin-left: 15px;
-      margin-right: 15px;
-      margin-bottom: 15px;
-      background-color: white;
+      margin-left: 7px;
+      margin-right: 7px;
+      margin-bottom: 10px;
+      background-color: #FAFBFC;
       -webkit-box-shadow: 1px 1px 1px #ccc;
       position: relative;
 
@@ -99,4 +100,41 @@
       }
     }
 
+}
+
+.placeholder {
+  width: 100%;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+    ol {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      li {
+        font-size: 25px;
+        margin: 7px;
+      }
+
+      #digifridge {
+        font-weight: bold;
+        color: rgba(102, 180, 209, 0.8);
+      }
+
+      #recipes {
+        font-weight: bold;
+        color: #fc9608;
+      }
+    }
+}
+
+.saves {
+  h1 {
+    width: 500px;
+    text-align: center;
+  }
 }

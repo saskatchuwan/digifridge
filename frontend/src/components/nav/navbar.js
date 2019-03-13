@@ -1,13 +1,16 @@
 import React from 'react';
-import { NavLink, withRouter } from 'react-router-dom';
+import {NavLink, Link, withRouter } from 'react-router-dom';
 import './navbar.scss';
-
+// import cx from 'classnames';
 import fridgelogo from '../../images/icons/fridge-round.svg';
 
 
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
+    // this.state = {
+    //   pathname: ''
+    // };
     this.logoutUser = this.logoutUser.bind(this);
     this.getLinks = this.getLinks.bind(this);
   }
@@ -16,10 +19,19 @@ class NavBar extends React.Component {
       e.preventDefault();
       this.props.logout();
   }
+  // componentDidUpdate(prevProps){
+  //   if (this.props !== prevProps) {
+  //     console.log(this.props.location);
+  //     this.setState({pathname: this.props.location});
+  //   }
+  // }
 
   // Selectively render links dependent on whether the user is logged in
-  getLinks() {
+  getLinks(pathname) {
+    console.log(pathname);
       if (this.props.loggedIn) {
+        // const loggedInSearch = cx('link nav-link', {'selected-link': pathname.includes('/home')});
+        // const loggedInSave = cx('link nav-link', {'selected-link': pathname.includes('/saved')});
         return (
             <div className='logged-in-links'>
 
@@ -30,17 +42,17 @@ class NavBar extends React.Component {
                   Recipe Preferences
                 </a>
 
-                <NavLink 
-                  className='link nav-link' 
+                <Link 
+                className='link nav-link' 
                   to={'/home'}>
                   Recipe Search
-                </NavLink>
+                </Link>
 
-                <NavLink 
-                  className='link nav-link' 
+                <Link 
+                className='link nav-link' 
                   to={'/saved'}>
                   Saved Recipes
-                </NavLink>
+                </Link>
               </div>
 
               <a href='#'
@@ -61,6 +73,8 @@ class NavBar extends React.Component {
   }
 
   render() {
+    // const { pathname } = this.state
+    
       return (
         <div className='navbar'>
             <a href='#/' className='nav-logo'>
