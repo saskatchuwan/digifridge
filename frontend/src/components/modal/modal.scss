@@ -69,6 +69,14 @@
   margin-right: 3px;
 }
 
+.dead-link {
+  display: none;
+}
+
+.toggle.dead-link {
+  display: none;
+}
+
 // everything below is toggle styling
 .react-toggle {
   touch-action: pan-x;

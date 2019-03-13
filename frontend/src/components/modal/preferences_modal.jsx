@@ -56,28 +56,28 @@ class PreferencesModal extends React.Component {
             <span>Vegan</span>
           </label>
 
-          <label>
+          <label className='dead-link'>
             <Toggle
-              className='toggle'
+              className='toggle dead-link'
               defaultChecked={this.state.glutenFree}
               onChange={this.handleToggle("glutenFree")} />
-            <span>Gluten-Free</span>
+            <span className='dead-link'>Gluten-Free</span>
           </label>
 
-          <label>
+          <label className='dead-link'>
             <Toggle
-              className='toggle'
+              className='toggle dead-link'
               defaultChecked={this.state.peanutFree}
               onChange={this.handleToggle("peanutFree")} />
-            <span>Peanut-Free</span>
+            <span className='dead-link'>Peanut-Free</span>
           </label>
 
-          <label>
+          <label className='dead-link'>
             <Toggle
-              className='toggle'
+              className='toggle dead-link'
               defaultChecked={this.state.dairyFree}
               onChange={this.handleToggle("dairyFree")} />
-            <span>Dairy-Free</span>
+            <span className='dead-link'>Dairy-Free</span>
           </label>
 
           <input 
