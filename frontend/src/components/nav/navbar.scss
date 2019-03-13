@@ -28,6 +28,7 @@
 
 
 .logged-out-links {
+  cursor: pointer;
   width: 200px;
   display: flex;
   justify-content: space-around;
@@ -61,7 +62,8 @@
 
     .content-links {
       .link {
-        // border-right: 1px solid #303236;
+        cursor: pointer;
+        border: 0 transparent;
         margin-right: 15px;
         margin-left: 15px;
       }
@@ -81,13 +83,14 @@
     }
   
   .logout-button {
+    height: 30px;
+    width: 70px;
     border: 1px solid #c1c1c1;
-    padding-left: 15px;
-    padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 5px;
     color: #999797;
+    cursor: pointer;
   }
 
   .logout-button:hover {

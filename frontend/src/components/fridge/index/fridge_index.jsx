@@ -2,7 +2,7 @@ import React from 'react';
 import FridgeIndexItem from './fridge_index_item';
 import '../fridge.scss';
 import _ from 'lodash';
-import {withRouter, Redirect} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 
 class FridgeIndex extends React.Component {

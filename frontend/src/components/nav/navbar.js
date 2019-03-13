@@ -36,11 +36,11 @@ class NavBar extends React.Component {
             <div className='logged-in-links'>
 
               <div className='content-links'>
-                <a href='#' 
+                <button
                   className='link recipe-preferences'
                   onClick={this.props.openModal}>
                   Recipe Preferences
-                </a>
+                </button>
 
                 <Link 
                 className='link nav-link' 
@@ -55,11 +55,11 @@ class NavBar extends React.Component {
                 </Link>
               </div>
 
-              <a href='#'
+              <button
                 className='link logout-button'
                 onClick={this.logoutUser}>
                 Log Out
-              </a>
+              </button>
             </div>
         );
       } else {
