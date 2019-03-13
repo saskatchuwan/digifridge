@@ -28,7 +28,7 @@ class NavBar extends React.Component {
 
   // Selectively render links dependent on whether the user is logged in
   getLinks(pathname) {
-    console.log(pathname);
+    // console.log(pathname);
       if (this.props.loggedIn) {
         // const loggedInSearch = cx('link nav-link', {'selected-link': pathname.includes('/home')});
         // const loggedInSave = cx('link nav-link', {'selected-link': pathname.includes('/saved')});

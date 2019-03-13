@@ -22,6 +22,7 @@ import { stringifyPreferences } from './reducers/preferences_selector';
 import 'normalize.css';
 
 
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
 
@@ -61,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchPreferences = fetchPreferences;
   window.postPreferences = postPreferences;
   window.stringifyPreferences = stringifyPreferences;
-  
+
   const root = document.getElementById('root');
   
   ReactDOM.render(<Root store={store}/>, root);
