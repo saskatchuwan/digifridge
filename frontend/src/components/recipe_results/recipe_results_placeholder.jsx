@@ -4,7 +4,7 @@ import React from 'react';
 const RecipeResultsPlaceholder = () => {
   return (
     <div className='results placeholder'>
-      <img src='https://www.dinnerthyme.com/images/icon3.gif'/>
+      <img src='https://www.dinnerthyme.com/images/icon3.gif' alt='no img'/>
       <h1>How to digifridge:</h1>
       <ol>
         <li>Enter food items and <span id='digifridge'>DIGIFRIDGE IT</span> to store a record of your groceries</li>
