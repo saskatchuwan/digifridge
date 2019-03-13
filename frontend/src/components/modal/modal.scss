@@ -22,8 +22,16 @@
   box-shadow: 4px 4px 5px rgba(102, 180, 209, 0.7);
 }
 
+.close-modal {
+  cursor: pointer;
+  justify-self: flex-end;
+  text-align: right;
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+
 .preferences-form {
-  margin: 30px;
+  margin: 10px 30px;
 
     .modal-title {
       text-shadow: none;
