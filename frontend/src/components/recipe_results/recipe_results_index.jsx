@@ -14,7 +14,7 @@ class RecipeResultsIndex extends React.Component {
     let { recipes, handleRecipe, buttonText, loading } = this.props;
     let recipeItems;
 
-    if (Object.keys(recipes).length === 0 && buttonText==='Save Recipe') {
+    if (Object.keys(recipes).length === 0 && buttonText==='Save') {
       recipeItems = <RecipeResultsPlaceholder />;
     } else if (Object.keys(recipes).length === 0 && buttonText==='Remove') {
       recipeItems = <RecipeSavesPlaceholder />;
